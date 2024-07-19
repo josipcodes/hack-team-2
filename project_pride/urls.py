@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from about.views import my_about
+from about.views import about
 from history.views import history
 from blog.views import blog
 
