@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-6f$*y$ofrybr8*wx!jsm#&ol2sz+ebp!2eh+4-1dw!pwfd)cvw'
-SECRET_KEY = '9!k@a8kf-m($gr5@eutsz^1zs30-_88#=ezpj(6kv1&&x^e5*x'
+SECRET_KEY = 'django-insecure-6f$*y$ofrybr8*wx!jsm#&ol2sz+ebp!2eh+4-1dw!pwfd)cvw'
+# SECRET_KEY = '9!k@a8kf-m($gr5@eutsz^1zs30-_88#=ezpj(6kv1&&x^e5*x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -101,15 +101,15 @@ WSGI_APPLICATION = 'project_pride.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+# DATABASES = {
+#      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#  }
 # DATABASES = {
 #     'default': dj_database_url.config(default='postgres://localhost/mydb')
 # }
