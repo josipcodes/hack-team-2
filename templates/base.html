@@ -1,5 +1,6 @@
 {% load static %}
 
+{% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'history' as history_url %}
 
@@ -48,10 +49,11 @@
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}"
                             aria-current="{% if request.path == home_url %}page{% endif %}">Home</a>
                     </li>
-                    <!-- TimeLine Link -->
+                    </li>
+                    <!-- History Link -->
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == gallery_url %}active{% endif %}"
-                            href="{% url 'timeline' %}"
+                            href="{% url 'history' %}"
                             aria-current="{% if request.path == gallery_url %}page{% endif %}">Timeline</a>
                     </li>
                     <!-- About Link -->
@@ -131,7 +133,7 @@
             <i class="fab fa-youtube-square ms-3"></i>
         </p>
     </footer>
-    
+
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">

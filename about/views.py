@@ -2,5 +2,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def my_about(request):
+def about(request):
     return HttpResponse("Hello, Prideful Pixels!")
