@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import History
 
-def history(request):
-    return HttpResponse("Hello, History Timeline!")
+def my_history(request):
+    history_events = History.objects.all()
+    return render(request, 'history/history.html', {'history_events': history_events})

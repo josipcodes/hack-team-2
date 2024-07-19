@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="history-header-img">
+    <img src="..." class="img-fluid" alt="Responsive image">
+</div>
+
+<div class="history-section section-md py-5">
+    <div class="history-container container">
+        <!-- Title  -->
+        <h1>Pride Movement History</h1>
+        <ul class="history-timeline">
+            {% for event in history_events %}
+            <li class="history-event" style="--accent-color:#41516C;">
+                <div class="history-date">{{ event.year|date:"Y" }}</div>
+                {% if event.image %}
+                <div class="history-image">
+                    <img src="{{ event.image.url }}" class="img-fluid" alt="{{ event.event }}">
+                </div>
+                {% endif %}
+                <div class="history-title">{{ event.event }}</div>
+                <div class="history-descr">{{ event.description }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extras %}
+{% endblock %}
