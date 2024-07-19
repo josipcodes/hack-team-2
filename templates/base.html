@@ -1,9 +1,6 @@
 {% load static %}
 
-{% url 'home' as home_url %}
 {% url 'about' as about_url %}
-{% url 'history' as history_url %}
-{% url 'cards' as cards_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -12,7 +9,7 @@
 <html class="h-100" lang="en">
 
 <head>
-    <title>TEAM 2</title>
+    <title>Team 2 | {% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -46,20 +43,16 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="navigation">
                     <!-- Home Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}"
-                            aria-current="{% if request.path == home_url %}page{% endif %}">Home</a>
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                     </li>
                     <!-- History Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == gallery_url %}active{% endif %}"
-                            href=""
-                            aria-current="{% if request.path == gallery_url %}page{% endif %}">Timeline</a>
+                        <a class="nav-link" href="{% url 'history' %}">History</a>
                     </li>
                     <!-- Flash Cards -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == cards_url %}active{% endif %}" href="{% url 'cards' %}"
-                            aria-current="{% if request.path == cards_url %}page{% endif %}">Flash cards</a>
+                        <a class="nav-link" href="{% url 'cards' %}">RainbowCards</a>
                     </li>
                     <!-- About Link -->
                     <li class="nav-item">
