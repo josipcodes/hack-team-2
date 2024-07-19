@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from about.views import my_about
-from history.views import my_history
+from history.views import history
+from blog.views import blog
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about/', my_about, name='my_about'),
-    path('history/', my_history, name='my_history'),
+    path('home/', home, name='home'),
+    path('about/', about, name='about'),
+    path('history/', history, name='history'),
 ]
