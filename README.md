@@ -29,7 +29,7 @@ The base of the platform lies in the LGBTQIA+ history which is outlined on a tim
 <br>
 <br>
 </details>
-
+   
 <details>
 <summary>🏳️‍🌈 <strong>The project has excellent design and layout</strong></summary>
 For the design and layout we have tried to stay close to the different flags the community has waved over the years and which are still used to this day. Important to the choices in layout, is the combination of compatibality on both desktop and mobile.
