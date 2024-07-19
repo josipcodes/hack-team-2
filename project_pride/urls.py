@@ -18,7 +18,7 @@ from django.urls import path, include
 from about.views import about
 from history.views import history
 from cards.views import cards
-from blog.views import blog
+from blog.views import Blog
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,5 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('history/', history, name='history'),
     path('cards/', cards, name='cards'),
+    path('accounts/', include('allauth.urls')),
 ]
