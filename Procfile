@@ -1,1 +1,1 @@
-web: gunicorn werecat.wsgi
+web: gunicorn project_pride.wsgi
