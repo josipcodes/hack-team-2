@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['8000-josipcodes-hackteam2-rkfeusdlffi.ws.codeinstitute-ide.net
 #     '8000-josipcodes-hackteam2-s6avx1sw0sc.ws.codeinstitute-ide.net', 
 #     '8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io'
 #     '8000-josipcodes-hackteam2-rkfeusdlffi.ws.codeinstitute-ide.net' - Kiree's
+#     '127.0.0.1'
 # ]
 
 
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'project_pride.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
