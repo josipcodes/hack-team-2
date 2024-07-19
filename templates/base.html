@@ -3,7 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'history' as history_url %}
-
+{% url 'cards' as cards_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -55,6 +55,11 @@
                         <a class="nav-link {% if request.path == gallery_url %}active{% endif %}"
                             href="{% url 'history' %}"
                             aria-current="{% if request.path == gallery_url %}page{% endif %}">Timeline</a>
+                    </li>
+                    <!-- Flash Cards -->
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == cards_url %}active{% endif %}" href="{% url 'cards' %}"
+                            aria-current="{% if request.path == cards_url %}page{% endif %}">Flash cards</a>
                     </li>
                     <!-- About Link -->
                     <li class="nav-item">
