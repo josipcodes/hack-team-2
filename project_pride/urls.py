@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from about.views import about
 from history.views import history
+from cards.views import cards
 from blog.views import blog
 
 urlpatterns = [
@@ -24,4 +25,5 @@ urlpatterns = [
     path('blog/', blog, name='blog'),
     path('about/', about, name='about'),
     path('history/', history, name='history'),
+    path('cards/', cards, name='cards'),
 ]
