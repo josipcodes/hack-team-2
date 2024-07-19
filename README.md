@@ -65,7 +65,7 @@ Current innovation/creativity
 
 Prideful Pixels presents to you Chronicals of Pride, a walk through the history of the LGBTQIA+ movement and a platform to bring people together from inside and outside the community. Chronicals of Pride is an educational platform that showcases the biggest milestones of the LGBTQIA+ community across the past century+.<br>
 <br>
-It provides an interactive timeline of the community which is easily accessable on both desktop and mobile. Visitors will be able to follow the development of the movement through these past decades to what it is today. Through the blog section members from inside and outside the community can share stories, comment and support each other where needed. Through flashcards, We will also answer the very real question of: "where DO the different colors stand for in the various rainbow flags?".
+It provides an interactive timeline of the community which is easily accessable on both desktop and mobile. Visitors will be able to follow the development of the movement through these past decades to what it is today. Through the blog section members from inside and outside the community can share stories, comment and support each other where needed. Through flashcards, We will also answer the very real question of: "where DO the different colors stand for in the various rainbow flags?". 
 
 ## Goal
 
