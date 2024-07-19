@@ -26,10 +26,11 @@ SECRET_KEY = 'django-insecure-6f$*y$ofrybr8*wx!jsm#&ol2sz+ebp!2eh+4-1dw!pwfd)cvw
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['8000-josipcodes-hackteam2-s6avx1sw0sc.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-josipcodes-hackteam2-rkfeusdlffi.ws.codeinstitute-ide.net']
 # ALLOWED_HOSTS = [
 #     '8000-josipcodes-hackteam2-s6avx1sw0sc.ws.codeinstitute-ide.net', 
 #     '8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io'
+#     '8000-josipcodes-hackteam2-rkfeusdlffi.ws.codeinstitute-ide.net' - Kiree's
 # ]
 
 
