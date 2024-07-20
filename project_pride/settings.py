@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+if os.path.isfile('env.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,15 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6f$*y$ofrybr8*wx!jsm#&ol2sz+ebp!2eh+4-1dw!pwfd)cvw'
-# SECRET_KEY = '9!k@a8kf-m($gr5@eutsz^1zs30-_88#=ezpj(6kv1&&x^e5*x'
+SECRET_KEY = os.environ.get("SECRET_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['8000-josipcodes-hackteam2-rkfeusdlffi.ws.codeinstitute-ide.net', '8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io',
-                    '.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com', os.environ.get("ALLOWED_HOST")]
 # ALLOWED_HOSTS = [
 #     '8000-josipcodes-hackteam2-s6avx1sw0sc.ws.codeinstitute-ide.net', 
 #     '8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io'
