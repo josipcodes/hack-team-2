@@ -6,6 +6,10 @@
 .dropdown-item {
   width: 90%;
 }
+
+/* BASE HTML */
+
+
 /* INDEX PAGE */
 
 .hero {
@@ -356,6 +360,82 @@
   height: 100%;
   text-align: center;
   color: black;
+}
+
+/* FOOTER */
+
+.footlinks {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footlinks-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footlinks-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footlinks-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footlinks-icons .voda {
+  border-radius: 10%;
+}
+
+.footlinks-icons a:hover,
+.footlinks-icons a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(32, 5, 152, 0.5);
+}
+
+.footlinks-icons i {
+  color: #000;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footlinks-icons i:hover,
+.footlinks-icons i:focus {
+  transform: scale(1.2);
+  color: #ff8c00;
+}
+
+.footlinks-icons .chameleon,
+.footlinks-icons .voda {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footlinks-icons a:hover .chameleon,
+.footlinks-icons a:hover .voda,
+.footlinks-icons a:focus .chameleon,
+.footlinks-icons a:focus .voda {
+  transform: scale(1.2);
+}
+
+.footlinks-icons a.voda-container {
+  border-radius: 10%;
+}
+
+.footlinks-icons a.voda-container:hover,
+.footlinks-icons a.voda-container:focus {
+  box-shadow: 0 0 0 3px rgba(32, 5, 152, 0.5);
 }
 
 @media (min-width: 40rem) {
