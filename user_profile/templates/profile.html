@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-5">
+            <h1 class="headings mb-0"><span>{{ user.username|first|title }}</span>{{ user.username|slice:'1:' }}'s
+                Profile
+            </h1>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Profile
+                </button>
+                <ul class="dropdown-menu settings-dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a class="dropdown-item" href="{% url 'profile' username=request.user.username %}">Profile</a>
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'bookmark_list' user.username %}">Favorites</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-5 mb-md-5 profile-page">
+            <div class="col-10">
+                <div class="col-12 profile-top mb-5">
+                    <div>
+                        {% if user.profile.image %}
+                        <img src="{{ profile.image.url }}" class="col-4 col-lg-2 rounded-circle"
+                            alt="Profile Image">
+                        {% else %}
+                        <img src="https://imgur.com/kUyQ94l.png" class="col-4 col-lg-2 rounded-circle"
+                            alt="No image availible Placeholder">
+                        {% endif %}
+                        <strong class="username ms-3">{{ user.username }}</strong>
+                    </div>
+                </div>
+                <p class="mt-5">First Name: {{ user.profile.fiName }}</p>
+                <hr>
+                <p>Last Name: {{ user.profile.laName }}</p>
+                <hr>
+                <p>Email: {{ user.profile.email }}</p>
+                <hr>
+                <p>Bio: {{ user.profile.bio }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
