@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="history-header-img">
-    <img src="..." class="img-fluid" alt="Responsive image">
+    <img src="{% static 'images/header.jpg' %}" class="img-fluid" alt="Responsive image">
 </div>
 
 <div class="history-section section-md py-5">
@@ -11,16 +11,16 @@
         <!-- Title  -->
         <h1>Pride Movement History</h1>
         <ul class="history-timeline">
-            {% for event in history_events %}
+            {% for history in history_events %}
             <li class="history-event" style="--accent-color:#41516C;">
-                <div class="history-date">{{ event.year|date:"Y" }}</div>
-                {% if event.image %}
+                <div class="history-date">{{ history.year|date:"Y" }}</div>
+                {% if history.image %}
                 <div class="history-image">
-                    <img src="{{ event.image.url }}" class="img-fluid" alt="{{ event.event }}">
+                    <img src="{{ history.image.url }}" class="img-fluid" alt="{{ history.event }}">
                 </div>
                 {% endif %}
-                <div class="history-title">{{ event.event }}</div>
-                <div class="history-descr">{{ event.description }}</div>
+                <div class="history-title">{{ history.event }}</div>
+                <div class="history-descr">{{ history.description }}</div>
             </li>
             {% endfor %}
         </ul>
