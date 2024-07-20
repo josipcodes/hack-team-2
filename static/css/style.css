@@ -436,6 +436,14 @@
 .footlinks-icons a.voda-container:hover,
 .footlinks-icons a.voda-container:focus {
   box-shadow: 0 0 0 3px rgba(32, 5, 152, 0.5);
+
+.blog-card {
+  background-color: rgb(248, 252, 255);
+}
+
+.blog-card:hover {
+  background-color: white;
+  transition: background-color 0.7s;
 }
 
 @media (min-width: 40rem) {

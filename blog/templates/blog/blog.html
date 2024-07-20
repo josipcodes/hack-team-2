@@ -25,11 +25,11 @@
 </div>
 
 <!-- Blog posts section -->
-<div class="container-fluid blog">
+<div class="container">
     <div class="row">
         {% for post in object_list %}
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card p-0 mb-5">
+            <div class="card p-0 mb-5 blog-card">
                 <a href="{% url 'blog_post' post.slug %}" class="text-decoration-none text-dark">
                     <div class="image-container">
                         <!-- Placeholder or user-chosen image -->
