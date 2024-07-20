@@ -84,11 +84,15 @@ class EditBlog(LoginRequiredMixin, UpdateView):
     model = Blog
     form_class = BlogForm
     template_name = 'edit_blog.html'
-
+    
     def get_success_url(self):
         slug = self.object.slug
         messages.success(self.request, f"Blog post '{self.object.title}' updated successfully.")
-        return reverse_lazy('blog_post', kwargs={'slug': slug})
+        return reverse('blog_post', kwargs={'slug': slug})
+    
+    def get_object(self, queryset=None):
+        slug = self.kwargs.get('slug')
+        return get_object_or_404(Blog, slug=slug)
 
 class DeleteBlog(LoginRequiredMixin, DeleteView):
     model = Blog
