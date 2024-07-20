@@ -252,6 +252,112 @@
   border-color: #750787;
 }
 
+/* CARD PAGE */
+
+.category-cards {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.card-container {
+  position: relative;
+  width: 540px;
+  height: 340px;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rainbow-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+  filter: blur(10px);
+  border-radius: 15px;
+  transition: transform 0.8s, width 0.8s, height 0.8s;
+  z-index: 1;
+}
+
+.rainbow-shadow.shrink {
+  transform: scale(0.7);
+}
+
+.flip-card {
+  position: relative;
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 15px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.3s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 3%;
+}
+
+.flip-card-back-inside {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+}
+
 @media (min-width: 40rem) {
   .history-timeline {
       grid-template-columns: 1fr var(--line-w) 1fr;

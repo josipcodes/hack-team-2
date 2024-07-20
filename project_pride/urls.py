@@ -19,16 +19,12 @@ from about.views import about
 from history.views import history
 from cards.views import cards
 from blog.views import Blog
-from contact.views import contact
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('about/', about, name='about'),
     path('history/', history, name='history'),
-    path('cards/', cards, name='cards'),
+    path('', include('cards.urls')),
     path('accounts/', include('allauth.urls')),
-    path('contact/', contact, name='contact'),
-
 ]
