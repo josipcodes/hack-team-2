@@ -1,3 +1,11 @@
+.dropdown-menu[data-bs-popper] {
+  left: -90%;
+  margin-right: 1rem;
+}
+
+.dropdown-item {
+  width: 90%;
+}
 /* INDEX PAGE */
 
 .hero {
