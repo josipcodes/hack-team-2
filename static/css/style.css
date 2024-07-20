@@ -160,6 +160,17 @@
     z-index: -1;
     bottom: 0.25rem;
   }
+
+  .about-banner {
+    width: 100%;
+    height: 6em;
+    background-color: #FFF;
+    background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+  }
+
+  .card.card-team {
+    height: 100%;
+}
   
   @media (min-width: 40rem) {
     .history-timeline {
