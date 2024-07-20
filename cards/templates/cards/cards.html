@@ -3,5 +3,73 @@
 {% block title %}Cards{% endblock %}
 
 {% block content %}
+<div class="container-fluid">
+    <div class="d-flex justify-content-center mt-5">
+        {% if selected_category %}
+        <h1>{{ selected_category }}</h1>
+        {% else %}
+        <h1>Rainbow Cards</h1>
+        {% endif %}
+    </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3 d-flex align-items-center justify-content-end">
+      <div class="list-group col-8">
+        <a href="{% url 'cards' %}" class="list-group-item list-group-item-action {% if not selected_category %}active{% endif %}">All</a>
+        {% for category in categories %}
+          <a href="{% url 'cards' %}?category={{ category }}" class="list-group-item list-group-item-action {% if selected_category == category %}active{% endif %}">{{ category }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Main content -->
+    <div class="col-md-8">
+        <div class="category-cards">
+          {% for card in cards %}
+            <div class="card-container">
+              <div class="rainbow-shadow"></div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front align-item-center">
+                    {% if card.image %}
+                      <img class="card-img-top" src="{{ card.image.url }}" alt="{{ card.title }}">
+                    {% else %}
+                      <div class="card-title">
+                        <h2>{{ card.title }}</h2>
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-back-inside">
+                      <h2>{{ card.title }}</h2>
+                      <p>{{ card.content }}</p>
+                      {% if card.link %}
+                        <a href="{{ card.link }}">More Info</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        card.classList.toggle('flipped');
+        var shadow = card.closest('.card-container').querySelector('.rainbow-shadow');
+        if (shadow) {
+          shadow.classList.toggle('shrink');
+        }
+      });
+    });
+  });
+</script>
 {% endblock %}
