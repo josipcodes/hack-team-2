@@ -104,16 +104,17 @@ WSGI_APPLICATION = 'project_pride.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get('MONGODB_URI'))
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get('MONGODB_URI'))
-# }
 
 # DATABASES = {
 #      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
