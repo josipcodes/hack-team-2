@@ -61,7 +61,6 @@ INSTALLED_APPS = [
     'history',
     'cards',
     'contact',
-    'user_profile',
 ]
 
 SITE_ID = 1
