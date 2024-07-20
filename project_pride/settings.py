@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import pymongo
 if os.path.isfile('env.py'):
     import env
 
@@ -109,6 +110,14 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('MONGODB_URI'))
+}
+# if 'test' in sys.argv:
+#     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+
+# mongo_uri = os.environ.get('MONGODB_URI')
 
 # DATABASES = {
 #      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
