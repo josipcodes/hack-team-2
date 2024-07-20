@@ -358,6 +358,15 @@
   color: black;
 }
 
+.blog-card {
+  background-color: rgb(248, 252, 255);
+}
+
+.blog-card:hover {
+  background-color: white;
+  transition: background-color 0.7s;
+}
+
 @media (min-width: 40rem) {
   .history-timeline {
       grid-template-columns: 1fr var(--line-w) 1fr;

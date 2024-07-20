@@ -13,9 +13,9 @@ class BlogCategory(models.Model):
 
 class Blog(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blogs')
-    title = models.CharField(max_length=50, unique=True, validators=[MinLengthValidator(4)])
+    title = models.CharField(max_length=75, unique=True, validators=[MinLengthValidator(4)])
     slug = models.SlugField(max_length=200, unique=True)
-    excerpt = models.TextField(blank=True, max_length=75)
+    excerpt = models.TextField(blank=True, max_length=175)
     content = models.TextField(blank=False, null=False)
     blog_category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE, related_name='blogs', null=True, blank=False)
     image = CloudinaryField('image', null=True, blank=True)
