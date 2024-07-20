@@ -20,7 +20,7 @@ def home(request):
 class BlogList(generic.ListView):
     model = Blog
     queryset = Blog.objects.order_by('-created_on')
-    template_name = 'blog.html'
+    template_name = 'blog/blog.html'
     paginate_by = 12
 
 class BlogDetail(View):
@@ -31,7 +31,7 @@ class BlogDetail(View):
 
         return render(
             request,
-            "blog_post.html",
+            "blog/blog_post.html",
             {
                 "post": post,
                 "comments": comments,
@@ -56,7 +56,7 @@ class BlogDetail(View):
 
         return render(
             request,
-            "blog_post.html",
+            "blog/blog_post.html",
             {
                 "post": post,
                 "comments": comments,
@@ -66,7 +66,7 @@ class BlogDetail(View):
 
 class AddBlogView(LoginRequiredMixin, CreateView):
     model = Blog
-    template_name = 'add_blog.html'
+    template_name = 'blog/add_blog.html'
     fields = ['title', 'content', 'excerpt', 'image', 'blog_category']
     success_url = reverse_lazy('blog')
 
@@ -83,7 +83,7 @@ class AddBlogView(LoginRequiredMixin, CreateView):
 class EditBlog(LoginRequiredMixin, UpdateView):
     model = Blog
     form_class = BlogForm
-    template_name = 'edit_blog.html'
+    template_name = 'blog/edit_blog.html'
     
     def get_success_url(self):
         slug = self.object.slug
@@ -96,7 +96,7 @@ class EditBlog(LoginRequiredMixin, UpdateView):
 
 class DeleteBlog(LoginRequiredMixin, DeleteView):
     model = Blog
-    template_name = 'delete.html'
+    template_name = 'blog/delete.html'
     success_url = reverse_lazy('blog')
 
     def get_success_url(self):
@@ -116,7 +116,7 @@ class DeleteBlog(LoginRequiredMixin, DeleteView):
         return super().dispatch(request, *args, **kwargs)
 
 class EditCommentView(View):
-    template_name = 'edit_comment.html'
+    template_name = 'blog/edit_comment.html'
 
     def get(self, request, comment_id):
         comment = Comment.objects.get(id=comment_id)
@@ -138,7 +138,7 @@ class EditCommentView(View):
         return render(request, self.template_name, context)
 
 class DeleteCommentView(View):
-    template_name = 'delete.html'
+    template_name = 'blog/delete.html'
 
     def get(self, request, comment_id):
         comment = Comment.objects.get(id=comment_id)

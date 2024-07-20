@@ -6,4 +6,4 @@ from .models import History
 #     return render(request, 'history.html', {'history_events': history_events})
 
 def history(request):
-    return render(request, 'history.html')
+    return render(request, 'history/history.html')
