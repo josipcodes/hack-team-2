@@ -15,6 +15,41 @@
   background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);;
 }
 
+.news {
+  height: fit-content;
+}
+
+.news h2 {
+  background-color: rgb(35, 34, 34);
+  width: fit-content;
+  border-radius: 10px;
+  border: none;
+}
+
+#r {
+  color: red;
+}
+
+#o {
+  color: orange;
+}
+
+#y {
+  color: yellow;
+}
+
+#g {
+  color: green;
+}
+
+#b {
+  color: blue;
+}
+
+#v {
+  color: violet;
+}
+
 /* HISTORY TIMELINE */
 
 .history-section * {
