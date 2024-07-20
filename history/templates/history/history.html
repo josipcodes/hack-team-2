@@ -12,7 +12,7 @@
         <h1>Pride Movement History</h1>
         <ul class="history-timeline">
             {% for history in history_events %}
-            <li class="history-event" style="--accent-color:#41516C;">
+            <li class="history-event">
                 <div class="history-date">{{ history.year|date:"Y" }}</div>
                 {% if history.image %}
                 <div class="history-image">
