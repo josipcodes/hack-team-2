@@ -56,8 +56,9 @@
                     </li>
                     <!-- About Link -->
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"
-                            aria-current="{% if request.path == about_url %}page{% endif %}">About</a>
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <!-- <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}"
+                            aria-current="{% if request.path == about_url %}page{% endif %}">About</a> -->
                     </li>
                     <!-- User Authentication Links -->
                     {% if user.is_authenticated %}
