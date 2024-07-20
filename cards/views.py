@@ -5,4 +5,4 @@ from django.http import HttpResponse
 #     return HttpResponse("Hello, Ace of Spades!")
 
 def cards(request):
-    return render(request, 'cards.html')
+    return render(request, 'cards/cards.html')
