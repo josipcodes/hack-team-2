@@ -50,6 +50,52 @@ nav {
   box-shadow: none;
 }
 
+/* Signin, Login, Logout */
+.signall {
+  position: relative;
+}
+
+.form-box {
+  padding: 30px 0 80px 0;
+}
+
+.sign-box {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #000;
+}
+
+.signout {
+  box-shadow: none;
+}
+
+.rainbow-box {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+}
+
+.rainbow-box .btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.rainbow-box .btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.active-button {
+  background-color: #ffffff;
+  border: 2px solid #fff;
+  color: #000000;
+}
+
+.deactive-button,
+.active-button {
+  width: 90px;
+  font-size: 20px;
+}
+
 /* INDEX PAGE */
 
 .hero {
@@ -143,7 +189,7 @@ nav {
   align-content: center;
   gap: 2rem;
   padding: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: var(--color);
   background: var(--bgColor);
 }
