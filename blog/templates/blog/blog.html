@@ -16,10 +16,24 @@
 <!-- Admin add post section -->
 <div class="container-fluid">
     <div class="d-flex justify-content-end">
+        <div class="dropdown mr-2 mt-1">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item active" href="#">All</a></li>
+              <li><a class="dropdown-item" href="#">Personal stories</a></li>
+              <li><a class="dropdown-item" href="#">News</a></li>
+              <a href="{% url 'cards' %}" class="list-group-item list-group-item-action {% if not selected_category %}active{% endif %}">All</a>
+              {% for blog in blogs %}
+                <a href="{% url 'blog' %}?category={{ category }}" class="list-group-item list-group-item-action {% if selected_category == category %}active{% endif %}">{{ category }}</a>
+              {% endfor %}
+            </ul>
+          </div>
         {% if user.is_authenticated and user.is_staff %}
-        <button href="{% url 'add_blog' %}" class="btn rainbow-btn me-2 mb-3" type="button">
+        <a href="{% url 'add_blog' %}" class="btn rainbow-btn me-2 mb-3">
             <i class="fas fa-plus-circle"></i> Add Blogpost
-        </button>
+        </a>
         {% endif %}
     </div>
 </div>
