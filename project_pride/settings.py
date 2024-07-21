@@ -124,7 +124,6 @@ DATABASES = {
     ))
 }
 
-
 # if 'test' in sys.argv:
 #     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
@@ -194,3 +193,15 @@ CLOUDINARY_STORAGE = {
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# EMAIL CONTACT FORM TO ADMIN
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = 'c9583217415a11'
+EMAIL_HOST_PASSWORD = 'cfe55a139d4fa1'
+EMAIL_PORT = '2525'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io',
+]

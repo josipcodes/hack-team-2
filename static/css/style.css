@@ -565,6 +565,8 @@ nav {
   font-weight: bold !important;
   text-align: center;
   padding: 2rem 0;
+  text-decoration: none;
+  color: #000000;
 }
 
 /* BLOG */
