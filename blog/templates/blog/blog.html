@@ -28,8 +28,8 @@
 <div class="container blog-page">
     <div class="row">
         {% for post in object_list %}
-        {% if forloop.first %}
-        <div class="col-12 col-md-12 col-lg-8">
+        <!-- expands the latest post on wider screens -->
+        <div class="col-12 {% if forloop.first %} col-md-12 col-lg-8 {% else %} col-md-6 col-lg-4 {% endif %}">
             <div class="card p-0 mb-5 blog-card">
                 <a href="{% url 'blog_post' post.slug %}" class="text-decoration-none text-dark">
                     <div class="image-container position-relative">
@@ -39,40 +39,11 @@
                         {% else %}
                         <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
                         {% endif %}
+                        <!-- adds overlay to the image of the latest post -->
+                        {% if forloop.first %}
                         <div class="blog-latest-overlay d-flex justify-content-start">
                             <div class="h4 mx-5 my-2">Latest</div>
                         </div>
-                    </div>
-                    <!-- Title and excerpt section -->
-                    <div class="pb-3 ps-4 pe-3 mt-1">
-                        <h2 class="card-title mb-3 mt-1">{{ post.title }}</h2>
-                        <hr>
-                        <p class="card-text lead">{{ post.excerpt }}</p>
-                    </div>
-                    <hr>
-                    <!-- Category and published date/time section -->
-                    <div class="col-12 d-flex justify-content-between">
-                        <span class="h6 pb-1 ps-3 fw-bolder">{{ post.blog_category }} 
-                        </span>
-                        <span class="text-muted h6 pb-1 ps-3 me-3 fw-bolder">{{ post.created_on }} 
-                            <!-- Leaving an option of displaying likes if the need arises in the future -->
-                            <!-- <i class="far fa-heart"></i> -->
-                            <!-- {{ post.number_of_likes }} -->
-                        </span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        {% else %}
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card p-0 mb-5 blog-card">
-                <a href="{% url 'blog_post' post.slug %}" class="text-decoration-none text-dark">
-                    <div class="image-container">
-                        <!-- Placeholder or user-chosen image -->
-                        {% if post.image %}
-                        <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
-                        {% else %}
-                        <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
                         {% endif %}
                     </div>
                     <!-- Title and excerpt section -->
@@ -95,7 +66,6 @@
                 </a>
             </div>
         </div>
-        {% endif %}
             {% endfor %}
         </div>
     </div>
