@@ -1060,3 +1060,11 @@ nav {
     padding-bottom: 0;
   }
 }
+
+@media (max-width: 650px){
+.contact-form {
+  margin: 0 auto;
+  max-width: 95%;
+  padding: 12px;
+}
+}
