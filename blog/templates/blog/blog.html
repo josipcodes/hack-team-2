@@ -42,11 +42,17 @@
                         <p class="card-text lead">{{ post.excerpt }}</p>
                     </div>
                     <hr>
-                    <!-- Category and published date/time section -->
-                    <div class="col-12 d-flex justify-content-between">
-                        <span class="h6 pb-1 ps-3 fw-bolder">{{ post.blog_category }} 
+                    <!-- Category, published date/time and comment section -->
+                    <div class="col-12 d-flex justify-content-around">
+                        <span class="h6 pb-1 ps-1 fw-bolder">{{ post.blog_category }} 
                         </span>
                         <span class="text-muted h6 pb-1 ps-3 me-3 fw-bolder">{{ post.created_on }} 
+                        </span>
+                        <span>
+                            {% with post.comments.count as total_comments %}
+                            <strong class="text-secondary blog-comment pe-1 pb-1"><i class="far fa-comments"></i>
+                                {{ total_comments }}</strong>
+                            {% endwith %}
                         </span>
                     </div>
                 </a>
