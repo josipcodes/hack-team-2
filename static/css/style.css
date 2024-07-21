@@ -194,8 +194,7 @@ nav {
   text-align: center;
   background-color: var(--accent-color);
 
-  /* color: white; */
-  color: #000000;
+  color: #000;
   font-size: 1.25rem;
   font-weight: 700;
 
@@ -661,11 +660,56 @@ nav {
 
 /* About page */
 
-  .spacing {
-    /* Card Spacing */
-    display: flex;
-    justify-content: space-evenly;
-    transform-style: preserve-3d;
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 170px;
+  height: 220px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 25s linear infinite;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+  }
+}
+
+.banner .slider:hover {
+  animation-play-state: paused;
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+  transition: transform 1s;
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spacing {
+  /* Card Spacing */
+  display: flex;
+  justify-content: space-evenly;
+  transform-style: preserve-3d;
 }
 
 .spacing .polariod{
@@ -682,24 +726,67 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 130%;
+    height: 40%;
     transform-style: preserve-3d;
     transition: 0.9s ease;
-    background: blueviolet;
+    background: #333;
+    color: #fff;
 }
+
 .spacing .polariod:hover .card-axis {
-    /* Card Rotation */
-    transform: rotateY(180deg);
+  color: #000;
+  border: 2px solid #ffffff;
 }
+
+/* Add hover effects for color classes */
+.spacing .polariod.red:hover .card-axis {
+  background: #ffadad;
+  box-shadow: 0 0 5px #e40303, 0 0 10px #e40303, inset 0 0 5px #e40303;
+}
+
+.spacing .polariod.orange:hover .card-axis {
+  background: #ffd6a5;
+  box-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00, inset 0 0 5px #ff8c00;
+}
+
+.spacing .polariod.yellow:hover .card-axis {
+  background: #fdffb6;
+  box-shadow: 0 0 5px #ffed00, 0 0 10px #ffed00, inset 0 0 5px #ffed00;
+}
+
+.spacing .polariod.green:hover .card-axis {
+  background: #caffbf;
+  box-shadow: 0 0 5px #008026, 0 0 10px #008026, inset 0 0 5px #008026;
+}
+
+.spacing .polariod.blue:hover .card-axis {
+  background: #9bf6ff;
+  box-shadow: 0 0 5px #004dff, 0 0 10px #004dff, inset 0 0 5px #004dff;
+}
+
+.spacing .polariod.indigo:hover .card-axis {
+  background: #bdb2ff;
+  box-shadow: 0 0 5px #570997, 0 0 10px #570997, inset 0 0 5px #570997;
+}
+
+.spacing .polariod.violet:hover .card-axis {
+  background: #ffc6ff;
+  box-shadow: 0 0 5px #750787, 0 0 10px #750787, inset 0 0 5px #750787;
+}
+
+.spacing .polariod .card-axis.flipped {
+  transform: rotateY(180deg);
+}
+
 .spacing .polariod .card-axis div img {
     /* Front image dimensions */
     position: absolute;
-    top: 45%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    height: 80%;
+    height: 60%;
     object-fit: cover;
     
 }
