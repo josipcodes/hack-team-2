@@ -103,6 +103,28 @@ Chronicles of Pride provides an easy and accessable way to learn about LGBTQIA+'
 
 In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
 
-## Credits
+## Resources Used
 
-In the credits section, we provide information about the sources used
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Source 1](https://www.google.com/) | Where was it used | What did it do |
+| [Human Rights Campaign](https://www.hrc.org/resources/lgbtq-pride-flags) | Rainbow cards | providing flag info and context |
+| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | model creation | creating models |
+| [Mailtrap.io](https://mailtrap.io/) | Contact form | To link the contact form to receive emails |
+| [Youtube](https://www.youtube.com/watch?v=dnhEnF7_RyM) | Contact form | tutorial for troubleshooting the contact form |
+| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | converting images from AVIF to JPG |
+| [SVG to PNG](https://svgtopng.com/) | across website | converting images from SVG to PNG |
+| [JPG to PNG](https://jpg2png.com/) | across website| converting images from JPG to PNG |
+| [TinyJPG](https://tinyjpg.com/) | across website | surpressing images |
+| [Font Awesome](https://fontawesome.com/) | across website | icons inspiration |
+| [Voda](https://www.voda.co/) | Some of our favourite people | Support page |
+| [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) | Some of our favourite people | Support page |
+| [Bicycle Adventure Club](https://bicycleadventureclub.co.uk/) | Some of our favourite people | Support page |
+| [Fandom](https://lgbtqia.fandom.com/wiki/LGBTQIA%2B_Wiki) | History | providing main events |
+| [Fonts Google](https://fonts.google.com/ ) | across website | Font selection |
+| [Coolors](https://coolors.co/) | across website | Color palet selection |
+
+### Acknowledgements
+
+- Further words of gratitude
+- 
