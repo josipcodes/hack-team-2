@@ -5,14 +5,19 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div>
+<section class="contact-banner text-center container-fluid mt-5 mb-4">
     <h1>What's on your mind?</h1>
-    <form method="post" action="{% url 'contact' %}">
+</section>
+
+<div>
+    
+    <form class="contact-form" method="post" action="{% url 'contact' %}">
+
         {% csrf_token %}
 
         {{ form.as_p }}
 
-        <button>Submit</button>
+        <button class="btn submit-btn px-4 gap-3">Submit</button>
     </form>
 </div>
 

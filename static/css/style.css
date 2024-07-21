@@ -22,13 +22,13 @@ nav {
 }
 
 /* BUTTONS */
-.hero-btn {
+.hero-btn, .submit-btn {
   background-color: #fff;
   border: 2px solid #000;
   box-shadow: 3px 3px 1px #000;
 }
 
-.hero-btn:hover {
+.hero-btn:hover, .submit-btn:hover {
   box-shadow: none;
 }
 
@@ -41,6 +41,10 @@ nav {
 
 .rainbow-btn:hover {
   box-shadow: none;
+}
+
+.submit-btn {
+  margin-top: 1rem;
 }
 
 
@@ -596,6 +600,16 @@ nav {
   padding: 2rem 0;
   text-decoration: none;
   color: #000000;
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 50px;
+  border: 2px solid;
+  border-radius: 20px;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
 }
 
 /* BLOG */
