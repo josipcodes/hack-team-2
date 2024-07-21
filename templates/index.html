@@ -5,15 +5,18 @@
 {% block content %}
 
 <section class="hero px-4 py-5 mb-5 text-center">
-    <h1 class="display-5 fw-bold my-5">Come and join us as we learn about Pride!</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">
-            Welcome to Chronicles of Pride, your inclusive hub for learning about LGBTQ+ history, culture,
-            and community. Dive into the rich history, test your knowledge with interactive flashcards,
-            and connect with others through our community blog.
-        </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5">
-            <a href="#discover-history" class="btn hero-btn btn-lg px-4 gap-3">More</a>
+    <div class="hero-content">
+        <h1 class="display-5 fw-bold mb-3">Chronicles of Pride</h1>
+        <h2 class="display-6 fw-italic mb-4">Come and join us as we learn about Pride!</h2>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Welcome to Chronicles of Pride, your inclusive hub for exploring LGBTQIA+ history, culture, and
+                diversity. Dive into rich histories, test your knowledge with interactive flashcards, and connect with
+                our community through our engaging blog.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                <a href="#discover-history" class="btn hero-btn btn-lg px-4 gap-3">More</a>
+            </div>
         </div>
     </div>
 </section>
@@ -25,15 +28,15 @@
         <div class="col-lg-6">
             <h2 class="display-5 fw-bold lh-1 mb-3">Discover The History</h2>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
-                Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-                porta metus.
-                Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu odio.
-                Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus a.
-                Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-                dui porta.
-                Nam tristique quis augue at tristique.
+                The LGBTQIA+ community has a rich and diverse history, filled with moments of triumph, struggle, and
+                everyday life. Over the centuries, our community has faced persecution and vilification, but has also
+                been embraced, honored, and respected. From battling the HIV/AIDS crisis to standing strong during the
+                COVID-19 pandemic, we've always supported each other and those around us.
+            </p>
+            <p class="lead">
+                Our community includes famous athletes, authors, musicians, politicians, actors, and countless everyday
+                people who are your neighbors, friends, and family. Join us to explore and learn about our vibrant
+                history!
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="{% url 'history' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
@@ -46,15 +49,9 @@
         <div class="col-lg-6">
             <h2 class="display-5 fw-bold lh-1 mb-3">Rainbow Cards</h2>
             <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
-                Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-                porta metus.
-                Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu odio.
-                Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus a.
-                Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-                dui porta.
-                Nam tristique quis augue at tristique.
+                Curious about what 'Non-Binary' means? Or why the Progressive Pride flag has extra colors? Check out our
+                flashcards and discover fascinating insights about the LGBTQIA+ community. You might learn something new
+                and unexpected!
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a href="{% url 'cards' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
@@ -70,37 +67,40 @@
         <div class="col-lg-12 col-md-8 mx-auto">
             <h2 class="display-5 fw-bold lh-1 mb-3">Latest from the Blog</h2>
             <p class="lead mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
-                Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-                porta metus.
+                Our blog features stories from members of our community, curated and monitored by our team to ensure
+                they are appropriate for all users. If you have a story to share, use our contact page to submit it.
+                Come in, find something to read, start a conversensation, and make new friends!
             </p>
         </div>
-        <div class="row mb-2 mt-4">
-            {% for post in latest_blog_posts %}
-            <div class="col-md-4">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static text-start">
-                        <p class="d-inline-block mb-2 text-primary">{{ post.author }}</p>
-                        <h3 class="mb-0">{{ post.title }}</h3>
-                        <p class="card-text mb-auto">
-                            {{ post.excerpt }}
-                        </p>
-                        <a href="{% url 'blog_post' post.slug %}" class="stretched-link">Read more</a>
-                    </div>
+</section>
+<section class="py-5 text-center container">
+    <div class="row mb-2 mt-4">
+        {% for post in latest_blog_posts %}
+        <div class="col-md-4">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static text-start">
+                    <p class="d-inline-block mb-2 text-primary">{{ post.author }}</p>
+                    <h3 class="mb-0">{{ post.title }}</h3>
+                    <p class="card-text mb-auto">
+                        {{ post.excerpt }}
+                    </p>
+                    <a href="{% url 'blog_post' post.slug %}" class="stretched-link">Read more</a>
                 </div>
             </div>
-            {% endfor %}
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <a href="{% url 'blog' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
-            </div>
         </div>
-        <div class="news pt-5">
-            <h2 class="pb-3 mx-auto p-2 px-2"><span id="r">LG</span><span id="o">BT</span><span id="y">QI</span><span
-                    id="g">A+</span> <span id="b"> News</span> <span id="v"> Feed</span></h2>
-            <rssapp-carousel id="shL5YRROjhwwABVx" class="p-4"></rssapp-carousel>
+        {% endfor %}
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <a href="{% url 'blog' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
         </div>
-        <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+    </div>
+</section>
+<section class="py-5 text-center container">
+    <div class="news">
+        <h2 class="pb-3 mx-auto p-2 px-2"><span id="r">LG</span><span id="o">BT</span><span id="y">QI</span><span
+                id="g">A+</span> <span id="b"> News</span> <span id="v"> Feed</span></h2>
+        <rssapp-carousel id="shL5YRROjhwwABVx" class="p-4"></rssapp-carousel>
+    </div>
+    <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
 
     </div>
 </section>
