@@ -7,34 +7,9 @@
 <!-- Blog page heading -->
 <div class="container-fluid mt-5">
     <div class="row">
-        <div class="col-12 d-flex justify-content-center mb-3">
+        <div class="col-12 d-flex justify-content-center mb-4">
             <h1 class="headings">Blog</h1>
         </div>
-    </div>
-</div>
-
-<!-- Admin add post section -->
-<div class="container-fluid">
-    <div class="d-flex justify-content-end">
-        <div class="dropdown mr-2 mt-1">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item active" href="#">All</a></li>
-              <li><a class="dropdown-item" href="#">Personal stories</a></li>
-              <li><a class="dropdown-item" href="#">News</a></li>
-              <a href="{% url 'cards' %}" class="list-group-item list-group-item-action {% if not selected_category %}active{% endif %}">All</a>
-              {% for blog in blogs %}
-                <a href="{% url 'blog' %}?category={{ category }}" class="list-group-item list-group-item-action {% if selected_category == category %}active{% endif %}">{{ category }}</a>
-              {% endfor %}
-            </ul>
-          </div>
-        {% if user.is_authenticated and user.is_staff %}
-        <a href="{% url 'add_blog' %}" class="btn rainbow-btn me-2 mb-3">
-            <i class="fas fa-plus-circle"></i> Add Blogpost
-        </a>
-        {% endif %}
     </div>
 </div>
 
@@ -67,14 +42,17 @@
                         <p class="card-text lead">{{ post.excerpt }}</p>
                     </div>
                     <hr>
-                    <!-- Category and published date/time section -->
-                    <div class="col-12 d-flex justify-content-between">
-                        <span class="h6 pb-1 ps-3 fw-bolder">{{ post.blog_category }} 
+                    <!-- Category, published date/time and comment section -->
+                    <div class="col-12 d-flex justify-content-around">
+                        <span class="h6 pb-1 ps-1 fw-bolder">{{ post.blog_category }} 
                         </span>
                         <span class="text-muted h6 pb-1 ps-3 me-3 fw-bolder">{{ post.created_on }} 
-                            <!-- Leaving an option of displaying likes if the need arises in the future -->
-                            <!-- <i class="far fa-heart"></i> -->
-                            <!-- {{ post.number_of_likes }} -->
+                        </span>
+                        <span>
+                            {% with post.comments.count as total_comments %}
+                            <strong class="text-secondary blog-comment pe-1 pb-1"><i class="far fa-comments"></i>
+                                {{ total_comments }}</strong>
+                            {% endwith %}
                         </span>
                     </div>
                 </a>

@@ -133,22 +133,25 @@
           <div class="footlinks-icons pt-2">
             <a href="https://bicycleadventureclub.co.uk/" target="_blank" rel="noopener"
               aria-label="Visit the Bicycle Adventure Club page (opens in a new tab)">
-              <img src="../static/images/bikeclub.jpg" alt="Bicycle Adventure Club logo" class="bike">
+              <img src="../../static/images/bikeclub.jpg" alt="Bicycle Adventure Club logo" class="bike">
             </a>
             <a href="https://www.youtube.com/@queeeerchameleon" target="_blank" rel="noopener"
               aria-label="Visit the Queer Chameleon YouTube channel (opens in a new tab)">
-              <img src="../static/images/QC2.png" alt="Queer Chameleon logo" class="chameleon">
+              <img src="../../static/images/QC2.png" alt="Queer Chameleon logo" class="chameleon">
             </a>
             <a href="https://www.voda.co/blog" target="_blank" rel="noopener"
               aria-label="Try out Voda (opens in a new tab)">
-              <img src="../static/images/vodac.png" alt="Voda mental health app logo" class="voda">
+              <img src="../../static/images/vodac.png" alt="Voda mental health app logo" class="voda">
             </a>
           </div>
         </div>
       </div>
-      <div class="col-md-4 contact-us">
-        <h3 class="footer-title">Contact Us!</h3>
-        <!-- Add your contact content here -->
+      <div class="col-md-4">
+        <h3>
+          <a class="footer-title contact-us" href="{% url 'contact' %}">
+            <span class="contact-text">Contact Us!</span>
+          </a>
+        </h3>
       </div>
     </div>
     <p class="m-0 text-center border-top">
