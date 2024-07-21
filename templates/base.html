@@ -26,9 +26,9 @@
     <nav class="navbar navbar-expand-lg navbar-light transparent-bg">
       <div class="container-fluid">
         <!-- Brand Name -->
-        <a class="navbar-brand mt-lg-2" href="{% url 'home' %}"
-          ><span class="brand ms-3">Chronicles of Pride</span></a
-        >
+        <a class="navbar-brand mt-lg-2" href="{% url 'home' %}">
+          <span class="brand ms-3">Chronicles of Pride</span>
+        </a>
         <!-- Toggle Button for Mobile View -->
         <button
           class="navbar-toggler"
@@ -66,9 +66,7 @@
             </li>
           </ul>
           
-          <!-- Navbar Text --> 
-          {% if user.is_authenticated %}
-          <!-- Admin Panel Access for Admin Users -->
+          <!-- Navbar Text -->
           {% if user.is_staff %}
           <a
             id="btn-adpan"
@@ -81,33 +79,30 @@
             >Admin Panel</a
           >
           {% endif %}
-          {% endif %}
           <ul class="navbar-nav justify-content-end align-self-center">
             {% if user.is_authenticated %}
+            <!-- User Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link link dropdown-toggle d-block d-lg-none me-4" href="#"
-                    id="offcanvasNavbarDropdownSecond" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    {{ user }}
-                </a>
-                <ul class="dropdown-menu border-0" aria-labelledby="offcanvasNavbarDropdownSecond">
-                    <li><a class="dropdown-item link logout-nav px-2 mt-5 mb-2 ms-2"
-                            href="{% url 'account_logout' %}">Logout</a></li>
-                </ul>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ user.username }}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+              </ul>
             </li>
             {% else %}
-            <!-- User Registration Link -->
+            <!-- User Registration Links -->
             <li class="nav-item">
-                <a class="nav-link link mt-5 mt-lg-0 ms-3" href="{% url 'account_login' %}">Login</a>
+              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link link ms-3" href="{% url 'account_signup' %}">Sign Up</a>
+              <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
             </li>
             {% endif %}
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <!-- Displaying Django Messages -->
   <div class="container user-pg">
