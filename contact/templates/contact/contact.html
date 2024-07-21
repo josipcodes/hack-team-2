@@ -21,13 +21,54 @@
     </form>
 </div> -->
 
-<div>
+<!-- <div>
     <form class="contact-form" method="post" action="{% url 'contact' %}">
         {% csrf_token %}
         {{ form.as_p }}
+        <div class="checkbox-container">
+            {{ form.anonymous }} 
+            <label for="id_anonymous">{{ form.anonymous.label }}</label>
+        </div>
         <button class="btn submit-btn px-4 gap-3">Submit</button>
+    </form>
+</div> -->
+
+<div>
+    <form class="contact-form" method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <p>{{ form.name.label_tag }} {{ form.name }}</p>
+        <p>{{ form.email.label_tag }} {{ form.email }}</p>
+        <p>{{ form.content.label_tag }} {{ form.content }}</p>
+        <div class="checkbox-container">
+            {{ form.anonymous }} 
+            <label for="id_anonymous">{{ form.anonymous.label }}</label>
+        </div>
+        <button class="submit-btn">Submit</button>
     </form>
 </div>
 
+<!-- Messages -->
+{% if messages %}
+    <div id="popup-message" class="popup-message">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+<!-- JavaScript for pop-up message -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var popup = document.getElementById("popup-message");
+        if (popup) {
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 1000); 
+        }
+    });
+
+</script>
 
 {% endblock %}

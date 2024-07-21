@@ -197,3 +197,5 @@ EMAIL_PORT = '2525'
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io',
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

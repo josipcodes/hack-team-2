@@ -34,7 +34,6 @@ nav {
 
 .submit-btn {
   margin-top: 1rem;
-  padding: .5rem 1rem;
   font-size: 1.5rem;
   border-radius: .3rem;
 }
@@ -635,7 +634,7 @@ nav {
 
 .contact-form {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 65%;
   padding: 50px;
   border-radius: 20px;
   text-align: center;
@@ -662,6 +661,51 @@ nav {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  transform: scale(1.5);
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.popup-message {
+  position: fixed;
+  top: 90px;
+  margin-left: 2rem;
+  z-index: 1000;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  border-radius: .25rem;
+}
+
+.alert-success {
+  background-color: #adeabb;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+.alert-dismissible {
+  display: none;
+}
+
+/* .alert {
+  position: relative;
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  border-radius: .5rem;
+} */
 
 /* BLOG */
 .blog-card {
