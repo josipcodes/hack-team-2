@@ -43,11 +43,6 @@ nav {
   box-shadow: none;
 }
 
-.submit-btn {
-  margin-top: 1rem;
-}
-
-
 /* INDEX PAGE */
 
 .hero {
@@ -157,13 +152,17 @@ nav {
   list-style: none;
   width: min(60rem, 90%);
   margin-inline: auto;
+  position: relative;
 }
 
 /* line */
 .history-timeline::before {
   content: "";
-  grid-column: 1;
-  grid-row: 1 / span 20;
+  position: absolute; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--line-w);
   background: rgb(225, 225, 225);
   border-radius: calc(var(--line-w) / 2);
 }
@@ -605,10 +604,31 @@ nav {
   margin: 0 auto;
   max-width: 80%;
   padding: 50px;
-  border: 2px solid;
+  /* border: 2px solid; */
   border-radius: 20px;
   text-align: center;
   background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
+.contact-form label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #827e7e;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* BLOG */
@@ -651,6 +671,11 @@ nav {
   background-color: white;
   opacity: 50%;
   border-radius: 50px 15px 50px; 
+}
+
+.blog-article {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .blog-contact {
