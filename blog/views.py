@@ -138,13 +138,12 @@ class EditCommentView(View):
         return render(request, self.template_name, context)
 
 class DeleteCommentView(View):
-    template_name = 'blog/delete.html'
+    template_name = 'blog/delete_comment.html'
 
     def get(self, request, comment_id):
         comment = Comment.objects.get(id=comment_id)
         context = {
-            'delete_title': "Delete Comment",
-            'confirm_message': "Are you sure you want to delete this comment?",
+            'confirmation_message': "Are you sure you want to delete the comment?",
             'cancel_url': reverse_lazy('blog_post', kwargs={'slug': comment.blogpost.slug}),
             'comment': comment
         }
