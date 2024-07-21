@@ -494,8 +494,7 @@ nav {
   align-items: flex-start;
 }
 
-.footer-title h3,
-.contact-text {
+.footer-title h3 {
   font-family: 'Playwrite Deutschland Grundschrift', sans-serif;
   font-weight: bold;
   margin-bottom: 0.1rem;
