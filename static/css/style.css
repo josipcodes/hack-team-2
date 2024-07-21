@@ -494,7 +494,8 @@ nav {
   align-items: flex-start;
 }
 
-.footer-title {
+.footer-title h3,
+.contact-text {
   font-family: 'Playwrite Deutschland Grundschrift', sans-serif;
   font-weight: bold;
   margin-bottom: 0.1rem;
@@ -503,9 +504,12 @@ nav {
 
 .quick-links-container,
 .footlinks,
-.contact-us {
+.col-md-4 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 0;
 }
 
 .quick-links-container {
@@ -600,16 +604,41 @@ nav {
 .contact-us {
   font-weight: bold !important;
   text-align: center;
-  padding: 2rem 0;
   text-decoration: none;
   color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.contact-text {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-us:hover .contact-text,
+.contact-us:focus .contact-text {
+  color: rgb(193, 26, 222);
+  box-shadow: 0 0 0 2px rgb(193, 26, 222);
+  outline: none;
+}
+
+.contact-us:focus {
+  outline: none;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form {
   margin: 0 auto;
   max-width: 80%;
   padding: 50px;
-  /* border: 2px solid; */
   border-radius: 20px;
   text-align: center;
   background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
