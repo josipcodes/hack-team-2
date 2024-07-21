@@ -526,3 +526,20 @@
       border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
+
+@media (min-width: 991px) { 
+  .history-container {
+    height: 85%;
+    overflow-y: scroll;
+    align-content: start;
+
+  }
+
+  .history-section {
+    height: 55%;
+    padding-top: 2%;
+    overflow-y: hidden;
+    align-content: start;
+    padding-bottom: 0;
+  }
+}
