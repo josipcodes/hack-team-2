@@ -22,14 +22,21 @@ nav {
 }
 
 /* BUTTONS */
-.hero-btn {
+.hero-btn, .submit-btn {
   background-color: #fff;
   border: 2px solid #000;
   box-shadow: 3px 3px 1px #000;
 }
 
-.hero-btn:hover {
+.hero-btn:hover, .submit-btn:hover {
   box-shadow: none;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: .3rem;
 }
 
 .rainbow-btn {
@@ -43,14 +50,88 @@ nav {
   box-shadow: none;
 }
 
+/* Signin, Login, Logout */
+.signall {
+  position: relative;
+}
+
+.form-box {
+  padding: 30px 0 80px 0;
+}
+
+.sign-box {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #000;
+}
+
+.signout {
+  box-shadow: none;
+}
+
+.rainbow-box {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+}
+
+.rainbow-box .btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.rainbow-box .btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.active-button {
+  background-color: #ffffff;
+  border: 2px solid #fff;
+  color: #000000;
+}
+
+.deactive-button,
+.active-button {
+  width: 90px;
+  font-size: 20px;
+}
 
 /* INDEX PAGE */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 500px;
   background-color: #FFF;
   background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+}
+
+.hero-content {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.hero h1, .hero h2 {
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  margin-top: 1rem;
+}
+
+.hero h1, .hero h2, .hero p {
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  color: #000000; /* Adjust color as needed */
 }
 
 .news {
@@ -88,6 +169,11 @@ nav {
   color: violet;
 }
 
+.blog-articles a {
+  text-decoration: none;
+  color: #000000;
+}
+
 /* HISTORY TIMELINE */
 
 .history-section * {
@@ -103,7 +189,7 @@ nav {
   align-content: center;
   gap: 2rem;
   padding: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: var(--color);
   background: var(--bgColor);
 }
@@ -130,7 +216,7 @@ nav {
 /* line */
 .history-timeline::before {
   content: "";
-  position: absolute;
+  position: absolute; 
   top: 0;
   bottom: 0;
   left: 0;
@@ -161,21 +247,17 @@ nav {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
-
   text-align: center;
   background-color: var(--accent-color);
-
-  /* color: white; */
-  color: #000000;
+  color: #000;
   font-size: 1.25rem;
   font-weight: 700;
-
   display: grid;
   place-content: center;
   position: relative;
-
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
   border: 2px solid;
+  cursor: pointer;
 }
 
 /* date flap */
@@ -462,7 +544,7 @@ nav {
   align-items: flex-start;
 }
 
-.footer-title {
+.footer-title h3 {
   font-family: 'Playwrite Deutschland Grundschrift', sans-serif;
   font-weight: bold;
   margin-bottom: 0.1rem;
@@ -471,9 +553,12 @@ nav {
 
 .quick-links-container,
 .footlinks,
-.contact-us {
+.col-md-4 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 0;
 }
 
 .quick-links-container {
@@ -568,7 +653,65 @@ nav {
 .contact-us {
   font-weight: bold !important;
   text-align: center;
-  padding: 2rem 0;
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.contact-text {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-us:hover .contact-text,
+.contact-us:focus .contact-text {
+  color: rgb(193, 26, 222);
+  box-shadow: 0 0 0 2px rgb(193, 26, 222);
+  outline: none;
+}
+
+.contact-us:focus {
+  outline: none;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
+.contact-form label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #827e7e;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* BLOG */
@@ -595,90 +738,234 @@ nav {
   border-radius: 0 7px 7px 0;
 }
 
+.blog-header-container {
+  position: relative;
+}
+
+.blog-header-img {
+  max-height: 50vh;
+  border-radius: 15px;
+}
+
+.blog-header-overlay {
+  position: absolute;
+  margin: 30px;
+  padding: 25px;
+  background-color: white;
+  opacity: 50%;
+  border-radius: 50px 15px 50px; 
+}
+
+.blog-article {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.blog-contact {
+  background-color: #bbb;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
+/* Comment section */
+.comment-delete {
+  background-color: #bbb;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
 /* About page */
 
-  .spacing {
-    /* Card Spacing */
-    display: flex;
-    justify-content: space-evenly;
-    transform-style: preserve-3d;
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
-.spacing .polariod{
-    position: relative;
-    width: clamp(500px, 30vw, 800px);
-    height: clamp(500px, 30vw, 800px);
-    margin: 20px;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    cursor: pointer;
+.banner .slider {
+  position: absolute;
+  width: 170px;
+  height: 10px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 25s linear infinite;
+  z-index: 1;
 }
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+  }
+}
+
+.banner .slider:hover {
+  animation-play-state: paused;
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+  transition: transform 1s;
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spacing {
+  /* Card Spacing */
+  display: flex;
+  justify-content: space-evenly;
+  transform-style: preserve-3d;
+}
+
+.spacing .polariod {
+  position: relative;
+  width: clamp(500px, 30vw, 800px);
+  height: clamp(500px, 30vw, 800px);
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  z-index: 1;
+}
+
 .spacing .polariod .card-axis {
-    /* Pulling the card out of flow */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: 0.9s ease;
-    background: blueviolet;
+  /* Pulling the card out of flow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 44%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
 }
-.spacing .polariod:hover .card-axis {
-    /* Card Rotation */
-    transform: rotateY(180deg);
+
+.spacing .polariod .card-axis:hover {
+  color: #000;
+  border: 2px solid #ffffff;
 }
+
+/* Add hover effects for color classes */
+.spacing .polariod .card-axis.red:hover {
+  background: #ffadad;
+  box-shadow: 0 0 5px #e40303, 0 0 10px #e40303, inset 0 0 5px #e40303;
+}
+
+.spacing .polariod .card-axis.orange:hover {
+  background: #ffd6a5;
+  box-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00, inset 0 0 5px #ff8c00;
+}
+
+.spacing .polariod .card-axis.yellow:hover {
+  background: #fdffb6;
+  box-shadow: 0 0 5px #ffed00, 0 0 10px #ffed00, inset 0 0 5px #ffed00;
+}
+
+.spacing .polariod .card-axis.green:hover {
+  background: #caffbf;
+  box-shadow: 0 0 5px #008026, 0 0 10px #008026, inset 0 0 5px #008026;
+}
+
+.spacing .polariod .card-axis.blue:hover {
+  background: #9bf6ff;
+  box-shadow: 0 0 5px #004dff, 0 0 10px #004dff, inset 0 0 5px #004dff;
+}
+
+.spacing .polariod .card-axis.indigo:hover {
+  background: #bdb2ff;
+  box-shadow: 0 0 5px #570997, 0 0 10px #570997, inset 0 0 5px #570997;
+}
+
+.spacing .polariod .card-axis.violet:hover {
+  background: #ffc6ff;
+  box-shadow: 0 0 5px #750787, 0 0 10px #750787, inset 0 0 5px #750787;
+}
+
+.spacing .polariod .card-axis.flipped {
+  transform: rotateY(180deg);
+}
+
 .spacing .polariod .card-axis div img {
-    /* Front image dimensions */
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 80%;
-    object-fit: cover;
-    
+  /* Front image dimensions */
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 60%;
+  object-fit: cover;
 }
+
 .spacing .polariod .card-axis .content {
-    /* Content Positioning  */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #333;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
+  /* Content Positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
 }
+
 .spacing .polariod .card-axis .content div {
-    /* Raising the text from the card back */
-    padding: 20px;
-    background-color: rgb(60, 60, 60);
-    /* Background colour if gradients aren't supported */
-    background-image: linear-gradient(45deg, black, rgb(60, 60, 60));
-    transform: translateZ(100px);
-    overflow: auto;
+  /* Raising the text from the card back */
+  padding: 20px;
+  background-color: rgb(60, 60, 60);
+  /* Background colour if gradients aren't supported */
+  background-image: linear-gradient(45deg, black, rgb(60, 60, 60));
+  transform: translateZ(100px);
+  overflow: auto;
 }
+
 .spacing .polariod .card-axis .content h3 {
-    justify-content: start;
-    text-transform: uppercase;
-    font-family: Ubuntu;
+  justify-content: start;
+  text-transform: uppercase;
+  font-family: Ubuntu;
 }
+
 .spacing .polariod .card-axis .content p {
-    font-size: 20px;
-    font-family: Ubuntu;
+  font-size: 20px;
+  font-family: Ubuntu;
 }
-.spacing .polariod .card-axis .title{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    font-family: Playwrite DE VA;
+
+.spacing .polariod .card-axis .title {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: Playwrite DE VA;
+}
+
+.prideful {
+  position: absolute;
+  top: 0;
+  margin-top: 55vh;
+  margin-left: 37vw;
+  z-index: 1;
+}
+
+.prideful h2 {
+  font-size: 70px;
 }
 
 @media (min-width: 40rem) {
