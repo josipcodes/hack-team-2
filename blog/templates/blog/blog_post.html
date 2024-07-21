@@ -44,19 +44,7 @@
 	<hr>
 </section>
 
-<!-- <div class="row">
-	<div class="col-12 d-inline-flex justify-content-between">
-		<div class="row col-10">
-			<div class="d-md-flex col-md-2">
-				{% with post.comments.count as total_comments %}
-				<strong class="text-secondary blog-comment"><i class="far fa-comments"></i>
-					{{ total_comments }}</strong>
-				{% endwith %}
-			</div>
-		</div>
-	</div>
-</div> -->
-
+<!-- Comment Section -->
 <section>
     <div class="container-fluid blog-detail">
         <div class="row justify-content-center">
@@ -65,11 +53,11 @@
                     {% if user.is_authenticated %}
                     <h3>Leave a comment:</h3>
                     <p>Posting as: <strong>{{ user.username }}</strong></p>
-                    <form method="post" class="mt-1">
+                    <form method="post" class="mt-1" id="comment">
 						{{ comment_form.as_p }}
                         {% csrf_token %}
 						<div class="d-flex justify-content-end">
-                        	<a type="submit" class="btn rainbow-btn me-3 mt-2">Submit</a>
+                        	<input type="submit" class="btn rainbow-btn me-3 mt-2"></a>
 						</div>
                     </form>
                     {% endif %}
@@ -77,7 +65,7 @@
             </div>
             <div class="col-12 col-sm-9 card mb-4 mt-3 bg-transparent border-0">
                 <h3>Comments:</h3>
-                <div class="comments-wrapper mb-md-5 mb-md-0">
+                <div class="mb-md-5 mb-md-0">
                     <div class="card-body p-0 pt-2">
                         {% for comment in comments %}
                         <div class="row">
@@ -85,7 +73,7 @@
                                 <div class="flex-grow-1 ms-sm-3 col-10 col-md-8">
                                     <div class="d-flex justify-content-between settings">
                                         <p class="font-weight-bold">
-                                                <strong>{{ comment.user.username }} <i class="fa-regular fa-lightbulb"></i>:</strong>
+                                            <strong>{{ comment.user.username }} <i class="fa-regular fa-lightbulb"></i>:</strong>
                                         </p>
                                         {% if request.user == comment.user or user.is_staff %}
                                         <div class="dropdown">
@@ -96,8 +84,7 @@
                                             <ul class="dropdown-menu settings-dropdown-menu">
                                                 {% if request.user == comment.user or user.is_staff %}
                                                 <li>
-                                                    <a class="dropdown-item"
-                                                        href="">
+                                                    <a class="dropdown-item" href="{% url 'delete_comment' comment.id %}">
                                                         <div class="dropdown-item">Delete Comment</div>
                                                     </a>
                                                 </li>

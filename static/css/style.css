@@ -690,6 +690,12 @@ nav {
   background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
 }
 
+/* Comment section */
+.comment-delete {
+  background-color: #bbb;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
 /* About page */
 
 .banner {
