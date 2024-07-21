@@ -4,50 +4,82 @@
 
 {% block content %}
 
+<!-- Blog page heading -->
 <div class="container-fluid mt-5">
     <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            <h1 class="headings"><span>B</span>log</h1>
+        <div class="col-12 d-flex justify-content-center mb-3">
+            <h1 class="headings">Blog</h1>
         </div>
     </div>
 </div>
 
+<!-- Admin add post section -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            {% if user.is_authenticated and user.is_staff %}
-            <a href="{% url 'add_blog' %}" class="btn btn-signup col me-2 mb-3" type="button">
-                <i class="fas fa-plus-circle"></i> Add Blogpost
-            </a>
-            {% endif %}
-        </div>
+    <div class="d-flex justify-content-end">
+        <div class="dropdown mr-2 mt-1">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item active" href="#">All</a></li>
+              <li><a class="dropdown-item" href="#">Personal stories</a></li>
+              <li><a class="dropdown-item" href="#">News</a></li>
+              <a href="{% url 'cards' %}" class="list-group-item list-group-item-action {% if not selected_category %}active{% endif %}">All</a>
+              {% for blog in blogs %}
+                <a href="{% url 'blog' %}?category={{ category }}" class="list-group-item list-group-item-action {% if selected_category == category %}active{% endif %}">{{ category }}</a>
+              {% endfor %}
+            </ul>
+          </div>
+        {% if user.is_authenticated and user.is_staff %}
+        <a href="{% url 'add_blog' %}" class="btn rainbow-btn me-2 mb-3">
+            <i class="fas fa-plus-circle"></i> Add Blogpost
+        </a>
+        {% endif %}
     </div>
 </div>
 
-<div class="container-fluid blog">
+<!-- Blog posts section -->
+<div class="container blog-page">
     <div class="row">
-        <div class="col-md-12 col-lg-6">
-            {% for post in object_list %}
-            <div class="card p-0 mb-5">
-                <div class="image-container">
-                    {% if post.image %}
-                    <img class="card-img-top" src="{{ post.image.url }}">
-                    {% else %}
-                    <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
-                    {% endif %}
-                </div>
-                <a href="{% url 'blog_post' post.slug %}" class="post-link a-link">
-                    <div class="link pb-3 ps-4">
-                        <h2 class="card-title mb-4">{{ post.title }}</h2>
-                        <p class="card-text">{{ post.excerpt }}</p>
+        {% for post in object_list %}
+        <!-- expands the latest post on wider screens -->
+        <div class="col-12 {% if forloop.first %} col-md-12 col-lg-8 {% else %} col-md-6 col-lg-4 {% endif %}">
+            <div class="card p-0 mb-5 blog-card">
+                <a href="{% url 'blog_post' post.slug %}" class="text-decoration-none text-dark">
+                    <div class="image-container position-relative">
+                        <!-- Placeholder or user-chosen image -->
+                        {% if post.image %}
+                        <img class="card-img-top" src="{{ post.image.url }}">
+                        {% else %}
+                        <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
+                        {% endif %}
+                        <!-- adds overlay to the image of the latest post -->
+                        {% if forloop.first %}
+                        <div class="blog-latest-overlay d-flex justify-content-start">
+                            <div class="h4 mx-5 my-2">Latest</div>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <!-- Title and excerpt section -->
+                    <div class="pb-3 ps-4 pe-3 mt-1">
+                        <h2 class="card-title mb-3 mt-1">{{ post.title }}</h2>
+                        <hr>
+                        <p class="card-text lead">{{ post.excerpt }}</p>
+                    </div>
+                    <hr>
+                    <!-- Category and published date/time section -->
+                    <div class="col-12 d-flex justify-content-between">
+                        <span class="h6 pb-1 ps-3 fw-bolder">{{ post.blog_category }} 
+                        </span>
+                        <span class="text-muted h6 pb-1 ps-3 me-3 fw-bolder">{{ post.created_on }} 
+                            <!-- Leaving an option of displaying likes if the need arises in the future -->
+                            <!-- <i class="far fa-heart"></i> -->
+                            <!-- {{ post.number_of_likes }} -->
+                        </span>
                     </div>
                 </a>
-                <div class="col-12 d-flex justify-content-between">
-                    <p class="blog-date text-muted h6 pb-1 ps-3 mt-2">{{ post.created_on }} <i class="far fa-heart"></i>
-                        {{ post.number_of_likes }}
-                    </p>
-                </div>
             </div>
+        </div>
             {% endfor %}
         </div>
     </div>

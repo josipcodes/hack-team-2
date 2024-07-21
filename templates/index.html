@@ -4,20 +4,20 @@
 
 {% block content %}
 
-<section class="hero px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold my-5">Learn, Celebrate, and Connect with the LGBTQ+ Community</h1>
+<section class="hero px-4 py-5 mb-5 text-center">
+    <h1 class="display-5 fw-bold my-5">Come and join us as we learn about Pride!</h1>
     <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">
-            Welcome to Chronicles of Pride, your inclusive hub for learning about LGBTQ+ history, culture, 
-            and community. Dive into the rich history, test your knowledge with interactive flashcards, 
+            Welcome to Chronicles of Pride, your inclusive hub for learning about LGBTQ+ history, culture,
+            and community. Dive into the rich history, test your knowledge with interactive flashcards,
             and connect with others through our community blog.
         </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Button</button>
+            <a href="#discover-history" class="btn hero-btn btn-lg px-4 gap-3">More</a>
         </div>
     </div>
 </section>
-<section class="container col-xxl-8 px-4 py-5">
+<section id="discover-history" class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
             <img src="https://imgur.com/Bea3VUJ.png" class="d-block mx-lg-auto img-fluid" alt="" loading="lazy">
@@ -27,14 +27,16 @@
             <p class="lead">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
                 Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium porta metus.
+                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
+                porta metus.
                 Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu odio.
                 Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus a.
-                Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies dui porta.
+                Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
+                dui porta.
                 Nam tristique quis augue at tristique.
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="{% url 'history' %}" class="btn btn-primary btn-lg px-4 me-md-2">More</a>
+                <a href="{% url 'history' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
             </div>
         </div>
     </div>
@@ -46,14 +48,16 @@
             <p class="lead">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
                 Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium porta metus.
+                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
+                porta metus.
                 Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu odio.
                 Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus a.
-                Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies dui porta.
+                Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
+                dui porta.
                 Nam tristique quis augue at tristique.
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="{% url 'cards' %}" class="btn btn-primary btn-lg px-4 me-md-2">More</a>
+                <a href="{% url 'cards' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
             </div>
         </div>
         <div class="col-10 col-sm-8 col-lg-6">
@@ -68,53 +72,36 @@
             <p class="lead mt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
                 Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium porta metus.
+                Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
+                porta metus.
             </p>
         </div>
         <div class="row mb-2 mt-4">
+            {% for post in latest_blog_posts %}
             <div class="col-md-4">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static text-start">
-                        <p class="d-inline-block mb-2 text-primary">Author</p>
-                        <h3 class="mb-0">Title</h3>
+                        <p class="d-inline-block mb-2 text-primary">{{ post.author }}</p>
+                        <h3 class="mb-0">{{ post.title }}</h3>
                         <p class="card-text mb-auto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
-                            Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
+                            {{ post.excerpt }}
                         </p>
-                        <a href="" class="stretched-link">Link</a>
+                        <a href="{% url 'blog_post' post.slug %}" class="stretched-link">Read more</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static text-start">
-                        <p class="d-inline-block mb-2 text-primary">Author</p>
-                        <h3 class="mb-0">Title</h3>
-                        <p class="card-text mb-auto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
-                            Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                        </p>
-                        <a href="" class="stretched-link">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static text-start">
-                        <p class="d-inline-block mb-2 text-primary">Author</p>
-                        <h3 class="mb-0">Title</h3>
-                        <p class="card-text mb-auto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel congue.
-                            Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-                        </p>
-                        <a href="" class="stretched-link">Link</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <a href="{% url 'blog' %}" class="btn btn-primary btn-lg px-4 me-md-2">More</a>
+                <a href="{% url 'blog' %}" class="btn rainbow-btn btn-lg px-4 me-md-2">Learn more...</a>
             </div>
         </div>
+        <div class="news pt-5">
+            <h2 class="pb-3 mx-auto p-2 px-2"><span id="r">LG</span><span id="o">BT</span><span id="y">QI</span><span
+                    id="g">A+</span> <span id="b"> News</span> <span id="v"> Feed</span></h2>
+            <rssapp-carousel id="shL5YRROjhwwABVx" class="p-4"></rssapp-carousel>
+        </div>
+        <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+
     </div>
 </section>
 
