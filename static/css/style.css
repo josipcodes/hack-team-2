@@ -32,6 +32,13 @@ nav {
   box-shadow: none;
 }
 
+.submit-btn {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: .3rem;
+}
+
 .rainbow-btn {
   border: 4px solid transparent;
   border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
