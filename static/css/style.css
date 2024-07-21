@@ -1,3 +1,7 @@
+body {
+  font-family: Ubuntu;
+}
+
 /* BASE HTML */
 
 .dropdown-menu[data-bs-popper] {
@@ -449,9 +453,63 @@ nav {
 
 /* FOOTER */
 
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-title {
+  font-family: 'Playwrite Deutschland Grundschrift', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.1rem;
+  min-height: 2.5em;
+}
+
+.quick-links-container,
+.footlinks,
+.contact-us {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.quick-links-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.quick-links-title {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.quick-links-content a {
+  margin: 0.2rem 0;
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.quick-links-content a:hover,
+.quick-links-content a:focus {
+  color: rgb(193, 26, 222);
+  box-shadow: 0 0 0 2px rgb(193, 26, 222);
+  outline: none;
+}
+
 .footlinks {
+  font-weight: bold !important;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .footlinks-content {
@@ -501,6 +559,12 @@ nav {
 .footlinks-icons .chameleon,
 .footlinks-icons .voda {
   border: none;
+}
+
+.contact-us {
+  font-weight: bold !important;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 /* BLOG */
