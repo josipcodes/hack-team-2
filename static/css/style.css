@@ -32,6 +32,13 @@ nav {
   box-shadow: none;
 }
 
+.submit-btn {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: .3rem;
+}
+
 .rainbow-btn {
   border: 4px solid transparent;
   border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
@@ -43,9 +50,6 @@ nav {
   box-shadow: none;
 }
 
-.submit-btn {
-  margin-top: 1rem;
-}
 
 
 /* INDEX PAGE */
@@ -606,10 +610,31 @@ nav {
   margin: 0 auto;
   max-width: 80%;
   padding: 50px;
-  border: 2px solid;
+  /* border: 2px solid; */
   border-radius: 20px;
   text-align: center;
   background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
+.contact-form label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #827e7e;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* BLOG */
