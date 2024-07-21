@@ -193,6 +193,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io',
 ]
 
+
 # MESSAGES
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-secondary',
