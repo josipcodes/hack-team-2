@@ -7,8 +7,9 @@ given that only few categories should exist.
 """
 CATEGORIES = (
     ("Flags", "Flags"),
-    ("Events", "Events"),
+    ("Did you know?", "Did you know?"),
     ("People", "People"),
+    ("Glossary", "Glossary"),
     )
 
 class Cards(models.Model):
