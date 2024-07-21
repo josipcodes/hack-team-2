@@ -1,179 +1,169 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}About{% endblock %}
 
 {% block content %}
-<section class="about-banner text-center">
+<section class="container-fluid about-banner text-center mt-5">
     <h1>Meet the team!</h1>
 </section>
 
-<div class="spacing">
-  <div class="polariod">
-      <div class="card-axis">
-          <div>
-              <img src="patrick.jpg" alt="Team member: Patrick O'Doherty">
-              <h3 class="title">Patrick O'Doherty</h3>
-          </div>
-          <div class="content">
-              <div>
-                  <h3>Bio:</h3>
-                  <p>Lorum</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-    <!-- Profile 1 -->
-    <div class="col-lg-4 col-md-6 col-12 mb-4">
-      <div class="card card-team">
-        <img src="" class="card-img-top" alt="Profile 1" />
-        <div class="card-body">
-          <p class="card-title text-center">Name</p>
-          <p class="card-text"> Either include a very short bio OR just the picture of the person w their name and links to github / linkedin? </p>
-          <br>
-          <div class="socials">
-
-            <span><a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i></a><a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </a></span>
-          </div>
+<div class="banner">
+  <div class="slider" style="--quantity: 7">
+    {% comment %} Red {% endcomment %}
+    <div class="item" style="--position: 1">
+      <div class="spacing">
+        <div class="polariod red">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/chris.png' %}" alt="Team member: Chris">
+                    <h3 class="title">Chris</h3> 
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
-    <br>
-    <!-- Profile 2 -->
-    <div class="col-lg-4 col-md-6 col-12 mb-4">
-      <div class="card card-team">
-        <img src="" class="card-img-top" alt="Profile 2" />
-        <div class="card-body">
-          <p class="card-title text-center">Name</p>
-          <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel
-              congue. Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-              Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-              porta metus. Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu
-              odio. Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus
-              a. Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-              dui porta. Nam tristique quis augue at tristique. </p>
-          <br>
-          <div class="socials">
-
-            <span><a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i></a><a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </a></span>
-          </div>
+    {% comment %} Orange {% endcomment %}
+    <div class="item" style="--position: 7">
+      <div class="spacing">
+        <div class="polariod orange">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/maarten.png' %}" alt="Team member: Maarten">
+                    <h3 class="title">Maarten</h3> 
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
-    <br>
-    <!-- Profile 3 -->
-    <div class="col-lg-4 col-md-6 col-12 mb-4">
-      <div class="card card-team">
-        <img src="" class="card-img-top" alt="Profile 3" />
-        <div class="card-body">
-          <p class="card-title text-center">Name</p>
-          <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel
-              congue. Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-              Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-              porta metus. Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu
-              odio. Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus
-              a. Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-              dui porta. Nam tristique quis augue at tristique. </p>
-          <br>
-          <div class="socials">
-
-            <span><a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i></a><a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </a></span>
-          </div>
+    {% comment %} Yellow {% endcomment %}
+    <div class="item" style="--position: 6">
+      <div class="spacing">
+        <div class="polariod yellow">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/josip.png' %}" alt="Team member: Josip">
+                    <h3 class="title">Josip</h3> 
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
-    <!-- Profile 4 -->
-    <div class="col-lg-4 col-md-6 col-12 mb-4">
-      <div class="card card-team">
-        <img src="" class="card-img-top" alt="Profile 4" />
-        <div class="card-body">
-          <p class="card-title text-center">Name</p>
-          <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel
-              congue. Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-              Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-              porta metus. Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu
-              odio. Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus
-              a. Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-              dui porta. Nam tristique quis augue at tristique. </p>
-          <br>
-          <div class="socials">
-
-            <span><a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i></a><a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </a></span>
-          </div>
+    {% comment %} Green {% endcomment %}
+    <div class="item" style="--position: 5">
+      <div class="spacing">
+        <div class="polariod green">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/kayla.png' %}" alt="Team member: Kayla">
+                    <h3 class="title">Kayla</h3> 
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
-    <br>
-    <!-- Profile 5 -->
-    <div class="col-lg-4 col-md-6 col-12 mb-4">
-      <div class="card card-team">
-        <img src="" class="card-img-top" alt="Profile 5" />
-        <div class="card-body">
-          <p class="card-title text-center">Name</p>
-          <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel
-              congue. Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-              Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-              porta metus. Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu
-              odio. Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus
-              a. Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-              dui porta. Nam tristique quis augue at tristique. </p>
-          <br>
-          <div class="socials">
-
-            <span><a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i></a><a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </a></span>
-          </div>
+    {% comment %} Blue {% endcomment %}
+    <div class="item" style="--position: 4">
+      <div class="spacing">
+        <div class="polariod blue">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/mia.png' %}" alt="Team member: Mia Rasmussen">
+                  <h3 class="title">Mia Rasmussen</h3> 
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
-    <br>
-    <!-- Profile 6 -->
-    <div class="col-lg-4 col-md-6 col-12">
-      <div class="card card-team">
-        <img src="" class="card-img-top" alt="Profile 6" />
-        <div class="card-body">
-          <p class="card-title text-center">Name</p>
-          <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet ut turpis vel
-              congue. Etiam sit amet ex bibendum sapien euismod imperdiet tincidunt id nibh. Donec ac fringilla ligula.
-              Nullam facilisis magna mi, vel sodales nulla egestas nec. Cras elit nunc, pulvinar sed ex vitae, pretium
-              porta metus. Nullam aliquam eros sed venenatis suscipit. Donec a massa quis odio feugiat volutpat vel eu
-              odio. Nunc gravida libero vitae diam finibus rutrum. Vivamus dictum tellus purus, ac blandit eros rhoncus
-              a. Maecenas venenatis vestibulum metus rutrum tempor. Nullam placerat lacus in diam dapibus, ac ultricies
-              dui porta. Nam tristique quis augue at tristique. </p>
-          <br>
-          <div class="socials">
-
-            <span><a href="https://www.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin"></i></a><a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              </a></span>
-          </div>
+    {% comment %} Indigo {% endcomment %}
+    <div class="item" style="--position: 3">
+      <div class="spacing">
+        <div class="polariod indigo">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/kiree.jpg' %}" alt="Team member: Kiree">
+                    <h3 class="title">Kiree</h3> 
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    {% comment %} Violet {% endcomment %}
+    <div class="item" style="--position: 2">
+      <div class="spacing">
+        <div class="polariod violet">
+            <div class="card-axis">
+                <div>
+                  <img src="{% static 'images/team/patrick.jpg' %}" alt="Team member: Patrick O'Doherty">
+                    <h3 class="title">Patrick O'Doherty</h3> 
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="content">
+                    <div>
+                        <h3>Bio:</h3>
+                        <p>Lorum</p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const polaroids = document.querySelectorAll('.polariod');
+  
+    polaroids.forEach(polaroid => {
+      polaroid.addEventListener('click', function() {
+        const cardAxis = polaroid.querySelector('.card-axis');
+        cardAxis.classList.toggle('flipped');
+      });
+    });
+  });
+</script>
 
 {% endblock %}
