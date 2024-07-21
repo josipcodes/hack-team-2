@@ -49,6 +49,52 @@ nav {
   box-shadow: none;
 }
 
+/* Signin, Login, Logout */
+.signall {
+  position: relative;
+}
+
+.form-box {
+  padding: 30px 0 80px 0;
+}
+
+.sign-box {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #000;
+}
+
+.signout {
+  box-shadow: none;
+}
+
+.rainbow-box {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+}
+
+.rainbow-box .btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.rainbow-box .btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.active-button {
+  background-color: #ffffff;
+  border: 2px solid #fff;
+  color: #000000;
+}
+
+.deactive-button,
+.active-button {
+  width: 90px;
+  font-size: 20px;
+}
+
 /* INDEX PAGE */
 
 .hero {
@@ -122,6 +168,11 @@ nav {
   color: violet;
 }
 
+.blog-articles a {
+  text-decoration: none;
+  color: #000000;
+}
+
 /* HISTORY TIMELINE */
 
 .history-section * {
@@ -137,7 +188,7 @@ nav {
   align-content: center;
   gap: 2rem;
   padding: 2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: var(--color);
   background: var(--bgColor);
 }
@@ -773,17 +824,19 @@ nav {
   text-align: center;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 .banner .slider {
   position: absolute;
   width: 170px;
-  height: 220px;
+  height: 10px;
   top: 10%;
   left: calc(50% - 100px);
   transform-style: preserve-3d;
   transform: perspective(1000px);
   animation: autoRun 25s linear infinite;
+  z-index: 1;
 }
 
 @keyframes autoRun {
@@ -819,65 +872,69 @@ nav {
   transform-style: preserve-3d;
 }
 
-.spacing .polariod{
-    position: relative;
-    width: clamp(500px, 30vw, 800px);
-    height: clamp(500px, 30vw, 800px);
-    margin: 20px;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    cursor: pointer;
-}
-.spacing .polariod .card-axis {
-    /* Pulling the card out of flow */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 130%;
-    height: 40%;
-    transform-style: preserve-3d;
-    transition: 0.9s ease;
-    background: #333;
-    color: #fff;
+.spacing .polariod {
+  position: relative;
+  width: clamp(500px, 30vw, 800px);
+  height: clamp(500px, 30vw, 800px);
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.spacing .polariod:hover .card-axis {
+.spacing .polariod .card-axis {
+  /* Pulling the card out of flow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 44%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.spacing .polariod .card-axis:hover {
   color: #000;
   border: 2px solid #ffffff;
 }
 
 /* Add hover effects for color classes */
-.spacing .polariod.red:hover .card-axis {
+.spacing .polariod .card-axis.red:hover {
   background: #ffadad;
   box-shadow: 0 0 5px #e40303, 0 0 10px #e40303, inset 0 0 5px #e40303;
 }
 
-.spacing .polariod.orange:hover .card-axis {
+.spacing .polariod .card-axis.orange:hover {
   background: #ffd6a5;
   box-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00, inset 0 0 5px #ff8c00;
 }
 
-.spacing .polariod.yellow:hover .card-axis {
+.spacing .polariod .card-axis.yellow:hover {
   background: #fdffb6;
   box-shadow: 0 0 5px #ffed00, 0 0 10px #ffed00, inset 0 0 5px #ffed00;
 }
 
-.spacing .polariod.green:hover .card-axis {
+.spacing .polariod .card-axis.green:hover {
   background: #caffbf;
   box-shadow: 0 0 5px #008026, 0 0 10px #008026, inset 0 0 5px #008026;
 }
 
-.spacing .polariod.blue:hover .card-axis {
+.spacing .polariod .card-axis.blue:hover {
   background: #9bf6ff;
   box-shadow: 0 0 5px #004dff, 0 0 10px #004dff, inset 0 0 5px #004dff;
 }
 
-.spacing .polariod.indigo:hover .card-axis {
+.spacing .polariod .card-axis.indigo:hover {
   background: #bdb2ff;
   box-shadow: 0 0 5px #570997, 0 0 10px #570997, inset 0 0 5px #570997;
 }
 
-.spacing .polariod.violet:hover .card-axis {
+.spacing .polariod .card-axis.violet:hover {
   background: #ffc6ff;
   box-shadow: 0 0 5px #750787, 0 0 10px #750787, inset 0 0 5px #750787;
 }
@@ -887,56 +944,72 @@ nav {
 }
 
 .spacing .polariod .card-axis div img {
-    /* Front image dimensions */
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 60%;
-    object-fit: cover;
-    
+  /* Front image dimensions */
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 60%;
+  object-fit: cover;
 }
+
 .spacing .polariod .card-axis .content {
-    /* Content Positioning  */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #333;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
+  /* Content Positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
 }
+
 .spacing .polariod .card-axis .content div {
-    /* Raising the text from the card back */
-    padding: 20px;
-    background-color: rgb(60, 60, 60);
-    /* Background colour if gradients aren't supported */
-    background-image: linear-gradient(45deg, black, rgb(60, 60, 60));
-    transform: translateZ(100px);
-    overflow: auto;
+  /* Raising the text from the card back */
+  padding: 20px;
+  background-color: rgb(60, 60, 60);
+  /* Background colour if gradients aren't supported */
+  background-image: linear-gradient(45deg, black, rgb(60, 60, 60));
+  transform: translateZ(100px);
+  overflow: auto;
 }
+
 .spacing .polariod .card-axis .content h3 {
-    justify-content: start;
-    text-transform: uppercase;
-    font-family: Ubuntu;
+  justify-content: start;
+  text-transform: uppercase;
+  font-family: Ubuntu;
 }
+
 .spacing .polariod .card-axis .content p {
-    font-size: 20px;
-    font-family: Ubuntu;
+  font-size: 20px;
+  font-family: Ubuntu;
 }
-.spacing .polariod .card-axis .title{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    font-family: Playwrite DE VA;
+
+.spacing .polariod .card-axis .title {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: Playwrite DE VA;
+}
+
+.prideful {
+  position: absolute;
+  top: 0;
+  margin-top: 55vh;
+  margin-left: 37vw;
+  z-index: 1;
+}
+
+.prideful h2 {
+  font-size: 70px;
 }
 
 @media (min-width: 40rem) {

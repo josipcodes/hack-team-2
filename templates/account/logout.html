@@ -2,29 +2,24 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block title %}Logout{% endblock %}
 
 {% block content %}
-<div class="container log-pg w-50">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign Out" %}</h3>
+<div class="container-fluid d-flex justify-content-center">
+      <div class="col-12 mt-5 crud-box d-flex justify-content-center py-5">
+        <div>
+          <h3>{% trans "Logout" %}</h3>
 
-            <p>{% trans 'The real world is out there!  Are you sure you want to leave?' %}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <p>{% trans 'Are you sure you want to logout?' %}</p>
 
-            <form method="post" action="{% url 'account_logout' %}">
-                {% csrf_token %}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
-                <p class="log-msg"><strong>P.S.</strong> Don't forget to click the message.</p>
-            </form>
+        <form class="mt-4" method="post" action="{% url 'account_logout' %}">
+          {% csrf_token %}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="btn submit-btn btn-lg right" type="submit">{% trans 'Logout' %}</button>
+        </form>
         </div>
-    </div>
+      </div>
 </div>
-{% endblock content %}
+{% endblock %}

@@ -29,10 +29,14 @@
                         <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
                         {% endif %}
                         <!-- adds overlay to the image of the latest post -->
+                        {% if is_paginated %}
+                        {% if not page_obj.has_previous %}
                         {% if forloop.first %}
                         <div class="blog-latest-overlay d-flex justify-content-start">
                             <div class="h4 mx-5 my-2">Latest</div>
                         </div>
+                        {% endif %}
+                        {% endif %}
                         {% endif %}
                     </div>
                     <!-- Title and excerpt section -->

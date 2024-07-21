@@ -62,8 +62,9 @@
         </div>
     </div>
 </section>
+<!-- Blog Section -->
 <section class="py-5 text-center container">
-    <div class="row py-lg-5">
+    <div class="row pt-lg-5">
         <div class="col-lg-12 col-md-8 mx-auto">
             <h2 class="display-5 fw-bold lh-1 mb-3">Latest from the Blog</h2>
             <p class="lead mt-4">
@@ -73,20 +74,22 @@
             </p>
         </div>
 </section>
-<section class="py-5 text-center container">
-    <div class="row mb-2 mt-4">
-        {% for post in latest_blog_posts %}
-        <div class="col-md-4">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static text-start">
-                    <p class="d-inline-block mb-2 text-primary">{{ post.author }}</p>
-                    <h3 class="mb-0">{{ post.title }}</h3>
-                    <p class="card-text mb-auto">
-                        {{ post.excerpt }}
-                    </p>
-                    <a href="{% url 'blog_post' post.slug %}" class="stretched-link">Read more</a>
+<section class="pb-5 text-center container">
+    <div class="row mb-2 d-flex justify-content-center">
+        {% for post in latest_blogs %}
+        <div class="col-md-3 blog-articles">
+            <a href="{% url 'blog_post' post.slug %}">
+            {% if post.image %}
+                <img class="card-img-top" src="{{ post.image.url }}">
+            {% else %}
+                <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
+            {% endif %}
+                <div class="pb-3 ps-4 pe-3 mt-1">
+                    <h2 class="card-title mb-3 mt-1">{{ post.title }}</h2>
+                    <hr>
+                    <p class="card-text lead">{{ post.excerpt }}</p>
                 </div>
-            </div>
+            </a>
         </div>
         {% endfor %}
         <div class="d-grid gap-2 d-md-flex justify-content-md-center">

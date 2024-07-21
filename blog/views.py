@@ -14,14 +14,11 @@ def home(request):
     categories = BlogCategory.objects.all()
     return render(request, 'index.html', {'latest_blogs': latest_blogs, 'categories': categories})
 
-# def blog(request):
-#     return HttpResponse("Hello, Blogland!")
-
 class BlogList(generic.ListView):
     model = Blog
     queryset = Blog.objects.order_by('-created_on')
     template_name = 'blog/blog.html'
-    paginate_by = 12
+    paginate_by = 5
 
 class BlogDetail(View):
 
