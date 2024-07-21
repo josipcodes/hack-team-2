@@ -9,7 +9,7 @@
     <h1>What's on your mind?</h1>
 </section>
 
-<div>
+<!-- <div>
     
     <form class="contact-form" method="post" action="{% url 'contact' %}">
 
@@ -17,6 +17,14 @@
 
         {{ form.as_p }}
 
+        <button class="btn submit-btn px-4 gap-3">Submit</button>
+    </form>
+</div> -->
+
+<div>
+    <form class="contact-form" method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
         <button class="btn submit-btn px-4 gap-3">Submit</button>
     </form>
 </div>
