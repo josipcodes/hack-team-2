@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div>
+    <h1>What's on your mind?</h1>
+    <form method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button>Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}
