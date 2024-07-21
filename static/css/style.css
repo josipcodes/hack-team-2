@@ -593,6 +593,29 @@ nav {
   border-radius: 0 7px 7px 0;
 }
 
+.blog-header-container {
+  position: relative;
+}
+
+.blog-header-img {
+  max-height: 50vh;
+  border-radius: 15px;
+}
+
+.blog-header-overlay {
+  position: absolute;
+  margin: 30px;
+  padding: 25px;
+  background-color: white;
+  opacity: 50%;
+  border-radius: 50px 15px 50px; 
+}
+
+.blog-contact {
+  background-color: #bbb;
+  background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+}
+
 /* About page */
 
   .spacing {

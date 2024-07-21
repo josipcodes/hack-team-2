@@ -6,55 +6,42 @@
 
 {% load crispy_forms_tags %}
 
+<!-- Blog post heading -->
 <section>
     <div class="blog-post p-0 w-100 mt-5">
         <div class="container">
             <div class="row g-3">
-                <div class="col-md-6 masthead-text text-white">
-                    <h1 class="post-title ms-4">{{ post.title }}</h1>
-                    <p class="post-subtitle ms-4">{{ post.title }} | {{ post.created_on }}</p>
-                </div>
-                <div class="d-none d-md-block col-6 masthead-image">
+                <div class="blog-header-container">
+                    <h1 class="post-title blog-header-overlay">{{ post.title }} by {{ post.author }}</h1>
                     {% if post.image %}
-                    <img class="card-img-top" src="{{ post.image.url }}">
+                    <img class="card-img-top blog-header-img" src="{{ post.image.url }}" alt="Blog Image">
                     {% else %}
-                    <img src="https://imgur.com/jVraxDv.png" class="card-img-top" alt="Placeholder Image">
+                    <img src="https://imgur.com/jVraxDv.png" class="card-img-top blog-header-img" alt="Placeholder Image">
                     {% endif %}
                 </div>
-                <div class="col-12 d-flex justify-content-end settings blog-settings">
-                    {% if user.is_authenticated and user.is_staff %}
-                    <div class="dropdown">
-                        <button class="border-0 bg-transparent" id="settingsBlog" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fas fa-cog"></i>
-                        </button>
-                        <ul class="dropdown-menu settings-dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="">
-                                    <div class="dropdown-item">Edit Blog</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="">
-                                    <div class="dropdown-item">Delete Blog</div>
-                                </a>
-                            </li>
-                        </ul>
+            </div>
+			<!-- Blog post main area -->
+            <div class="row g-3">
+                <div class="blog-content-container">
+                    <p class="m-3 text-muted">Published: {{ post.created_on }}</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="m-3">{{ post.excerpt }}</h2>
+                        </div>
+                        <div class="col-md-6 blog-contact d-flex justify-content-center align-items-center">
+                            <h3 class="m-2">
+                                <strong>Give us a shout!</strong> If you wish to share something with us, don't forget to visit our <a class="mt-2" href="{% url 'contact' %}">Contact section</a>!
+                            </h3>
+                        </div>
                     </div>
-                    {% endif %}
+                    <div class="mx-5 my-4">
+                        {{ post.content | safe }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<div class="container blog-detail">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left top bg-transparent border-0">
-            <div class="card-body">
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
 
                 <div class="row">
                     <div class="col-12 d-inline-flex justify-content-between">
@@ -68,9 +55,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col">
             <hr>
