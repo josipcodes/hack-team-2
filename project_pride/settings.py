@@ -20,7 +20,6 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -30,7 +29,6 @@ SECRET_KEY = os.environ.get("SECRET_KEY"),
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = ['.herokuapp.com', os.environ.get("ALLOWED_HOST")]
 # ALLOWED_HOSTS = [
 #     '8000-josipcodes-hackteam2-s6avx1sw0sc.ws.codeinstitute-ide.net', 
@@ -38,7 +36,6 @@ ALLOWED_HOSTS = ['.herokuapp.com', os.environ.get("ALLOWED_HOST")]
 #     '8000-josipcodes-hackteam2-rkfeusdlffi.ws.codeinstitute-ide.net' - Kiree's
 #     '127.0.0.1'
 # ]
-
 
 
 # Application definition
@@ -100,7 +97,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project_pride.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -137,7 +133,6 @@ DATABASES = {
 #     'default': dj_database_url.config(default='postgres://localhost/mydb')
 # }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -156,7 +151,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -169,7 +163,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 
@@ -200,7 +193,6 @@ EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = 'c9583217415a11'
 EMAIL_HOST_PASSWORD = 'cfe55a139d4fa1'
 EMAIL_PORT = '2525'
-
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io',
