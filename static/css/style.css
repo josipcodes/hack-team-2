@@ -210,6 +210,8 @@ nav {
 
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
   border: 2px solid;
+
+  cursor: pointer;
 }
 
 /* date flap */
