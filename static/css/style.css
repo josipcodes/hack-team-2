@@ -314,7 +314,7 @@ nav {
 
 .card-border-wrapper {
   position: relative;
-  height: 7%;
+  height: 55%;
   display: inline-block; 
   /* padding: 5px; */
   border: 10px solid transparent;
@@ -567,13 +567,13 @@ nav {
 
 @media (min-width: 991px) { 
   .history-container {
-    height: 85%;
+    height: 65vh;
     overflow-y: scroll;
     align-content: start;
   }
 
   .history-section {
-    height: 55%;
+    height: 70vh;
     padding-top: 2%;
     overflow-y: hidden;
     align-content: start;
