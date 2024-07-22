@@ -1,5 +1,52 @@
 /* About page */
 
+.details-section {
+  display: none;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 30%;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.details-section.visible {
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+.about-links {
+  margin-top: 10px;
+}
+
+.about-link-icon {
+  color: #000;
+  font-size: 35px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.about-link-icon:hover {
+  color: #bc5ac1;
+}
+
 .banner {
     width: 100%;
     height: 100vh;
@@ -7,54 +54,54 @@
     overflow: hidden;
     position: relative;
     z-index: 2;
-  }
+}
   
-  .banner .slider {
+.banner .slider {
     position: absolute;
     width: 170px;
     height: 10px;
-    top: 10%;
-    left: calc(50% - 100px);
+    top: 6%;
+    left: calc(50% - 300px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
     animation: autoRun 25s linear infinite;
     z-index: 1;
-  }
+}
   
-  @keyframes autoRun {
+@keyframes autoRun {
     from {
       transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
     }
     to {
       transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
     }
-  }
+}
   
-  .banner .slider:hover {
+.banner .slider:hover {
     animation-play-state: paused;
-  }
+}
   
-  .banner .slider .item {
+.banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
     transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
     transition: transform 1s;
-  }
+}
   
-  .banner .slider .item img {
+.banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
   
-  .spacing {
+.spacing {
     /* Card Spacing */
     display: flex;
     justify-content: space-evenly;
     transform-style: preserve-3d;
-  }
+}
   
-  .spacing .polariod {
+.spacing .polariod {
     position: relative;
     width: clamp(500px, 30vw, 800px);
     height: clamp(500px, 30vw, 800px);
@@ -63,9 +110,9 @@
     perspective: 1000px;
     cursor: pointer;
     z-index: 1;
-  }
+}
   
-  .spacing .polariod .card-axis {
+.spacing .polariod .card-axis {
     /* Pulling the card out of flow */
     position: absolute;
     top: 0;
@@ -78,7 +125,7 @@
     color: #fff;
     cursor: pointer;
     z-index: 1;
-  }
+}
   
   .spacing .polariod .card-axis:hover {
     color: #000;
@@ -193,3 +240,47 @@
   .prideful h2 {
     font-size: 70px;
   }
+
+  .light {
+    cursor: pointer;
+  }
+
+  .light i {
+    color: #fdffb6;
+  }
+  
+  /* Add hover effects for color classes */
+  .card-axis.red.highlight {
+    background: #ffadad;
+    box-shadow: 0 0 5px #e40303, 0 0 10px #e40303, inset 0 0 5px #e40303;
+  }
+  
+  .card-axis.orange.highlight {
+    background: #ffd6a5;
+    box-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00, inset 0 0 5px #ff8c00;
+  }
+  
+  .card-axis.yellow.highlight {
+    background: #fdffb6;
+    box-shadow: 0 0 5px #ffed00, 0 0 10px #ffed00, inset 0 0 5px #ffed00;
+  }
+  
+  .card-axis.green.highlight {
+    background: #caffbf;
+    box-shadow: 0 0 5px #008026, 0 0 10px #008026, inset 0 0 5px #008026;
+  }
+  
+  .card-axis.blue.highlight {
+    background: #9bf6ff;
+    box-shadow: 0 0 5px #004dff, 0 0 10px #004dff, inset 0 0 5px #004dff;
+  }
+  
+  .card-axis.indigo.highlight {
+    background: #bdb2ff;
+    box-shadow: 0 0 5px #570997, 0 0 10px #570997, inset 0 0 5px #570997;
+  }
+  
+  .card-axis.violet.highlight {
+    background: #ffc6ff;
+    box-shadow: 0 0 5px #750787, 0 0 10px #750787, inset 0 0 5px #750787;
+  }  

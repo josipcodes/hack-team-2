@@ -2,7 +2,7 @@
 
 </h1>
 
-<img src="https://res.cloudinary.com/djdefbnij/image/upload/v1718956326/Untitled_design_1_rlpfyv.png" alt="Proud Coders Banner" width="1200"/>
+<img src="static/images/pride site a.png" alt="Chronicles of Pride site" width="1200"/>
 
 ## Table of Contents
 - [Deployment](#deployment)
@@ -210,18 +210,18 @@ The tech section provides information regarding the technology stack, dependenci
 | [ElephantSQL](https://www.elephantsql.com) | Used as the Postgres database |
 | [Heroku](https://dashboard.heroku.com) | Used for deployment |
 | [Cloudinary](https://cloudinary.com) | Used for media storage |
-| [Miro](https://miro.com/) | Across website | Plan/Visualise our product as a team  |
-| [Google Docs](https://docs.google.com/) | Across website | Plan/Visualise our product as a team  |
-| [Visual Studio Code](https://code.visualstudio.com/) | Across Website | Code Editor |
-| [Gitpod](https://gitpod.io/) | Across website | Code Editor |
-| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Models | Created models |
-| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | Converted images from AVIF to JPG |
-| [SVG to PNG](https://svgtopng.com/) | Across website | Converted images from SVG to PNG |
-| [JPG to PNG](https://jpg2png.com/) | Across website| Converted images from JPG to PNG |
-| [TinyJPG](https://tinyjpg.com/) | Across website | Surpressed images |
-| [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) | Across website | Bootstrap5 |
-| [Techsini](https://techsini.com/multi-mockup/index.php) | Hachathon page | create multi tool example |
-
+| [Miro](https://miro.com/) | Plan/Visualise our product as a team  |
+| [Google Docs](https://docs.google.com/) | Plan/Visualise our product as a team  |
+| [Visual Studio Code](https://code.visualstudio.com/) | Code Editor |
+| [Gitpod](https://gitpod.io/) | Code Editor |
+| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Created models |
+| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | Converted images from AVIF to JPG |
+| [SVG to PNG](https://svgtopng.com/) | Converted images from SVG to PNG |
+| [JPG to PNG](https://jpg2png.com/) | Converted images from JPG to PNG |
+| [TinyJPG](https://tinyjpg.com/) | Surpressed images |
+| [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) | Bootstrap5 |
+| [Techsini](https://techsini.com/multi-mockup/index.php) | create multi tool example |
+| [RSS feed](https://rss.app/feed/shL5YRROjhwwABVx) | plugin for news feed |
 
 
 ## Resources Used
