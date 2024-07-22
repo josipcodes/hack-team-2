@@ -188,3 +188,11 @@ Firstly, we would like to acknowledge XXXXX <strong>(Kiree, your contact / peopl
 
 Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.
 
+
+We would like to acknowledge three amazing groups of people that have permitted us to link their sites, each of them has a direct link to the LGBTQIA+ community and we thank them for their permission:
+
+* [Bicycle Adventure Club](https://bicycleadventureclub.co.uk/) - An LGBTQIA+ led bike club and Community Interest Company based in Birmingham, UK, with members around the world.
+
+* [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) -  Youtube channel with lots of interesting facts and information about the queer community.
+
+* [Voda](https://www.voda.co/blog) - An amazing app made by the queer community for the queer community to support the mental mental health of members of the LGBTQIA+ community.
