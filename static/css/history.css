@@ -47,9 +47,7 @@
     background: rgb(225, 225, 225);
     border-radius: calc(var(--line-w) / 2);
 }
-  
-/* columns*/
-  
+   
 /* row gaps */
 .history-timeline .history-event:not(:last-child) {
     margin-bottom: var(--row-gap);
