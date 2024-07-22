@@ -5,8 +5,8 @@
 {% block title %}Logout{% endblock %}
 
 {% block content %}
-<div class="container-fluid d-flex justify-content-center">
-      <div class="col-12 mt-5 crud-box d-flex justify-content-center py-5">
+<div class="container-fluid d-flex justify-content-center mt-md-5 ">
+      <div class="col-12 mt-1 mt-md-5 mb-5 d-flex justify-content-center py-5">
         <div>
           <h3>{% trans "Logout" %}</h3>
 
@@ -17,7 +17,7 @@
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-          <button class="btn submit-btn btn-lg right" type="submit">{% trans 'Logout' %}</button>
+          <button class="btn submit-btn rainbow-btn btn-lg right" type="submit">{% trans 'Logout' %}</button>
         </form>
         </div>
       </div>

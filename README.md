@@ -4,127 +4,190 @@
 
 <img src="https://res.cloudinary.com/djdefbnij/image/upload/v1718956326/Untitled_design_1_rlpfyv.png" alt="Proud Coders Banner" width="1200"/>
 
-# SUBMISSION
+## Table of Contents
+  * [Deployment](#deployment)
+    + [Create a Heroku App:](#create-a-heroku-app-)
+    + [Prepare the environment and settings.py file:](#prepare-the-environment-and-settingspy-file-)
+    + [Create files & directories](#create-files---directories)
+    + [Update Heroku Config Vars -- JOSIP CAN YOU LOOK AT THIS?](#update-heroku-config-vars----josip-can-you-look-at-this-)
+    + [Deploy](#deploy)
+  * [Criteria](#criteria)
+- [SUBMISSION](#submission)
+  * [Introduction](#introduction)
+  * [Goal](#goal)
+  * [Tech](#tech)
+  * [Resources Used](#resources-used)
+    + [Acknowledgements -- EVERYONE PLEASE ADD / CHANGE WHAT YOU WANT](#acknowledgements----everyone-please-add---change-what-you-want)
 
-## Deployment
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-#### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
 
-The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
 
-## Criteria
+# Deployment
+Take a look at the live site [here](https://chronicles-of-pride-9a12d37ba4db.herokuapp.com/).
 
-In this section, we will briefly discuss how our team addressed the applicable criteria:
+The following steps were taken to deploy the live website to Heroku from the GitHub repository:
+
+### Create a Heroku App:
+- Log into your [Heroku](https://dashboard.heroku.com/apps) account or create an account.
+- On the main page click the 'New' button at the top right corner and select 'Create New App' from the dropdown menu. 
+![Heroku Create App](/documentation/readme_images/heroku-create-new.png)
+- Enter in a unique app name
+- Select your region
+- Click 'Create App'
+![Heroku New App](/documentation/readme_images/heroku-create-app.png)
+
+### Prepare the environment and settings.py file:
+- In your workspace, create an env.py file in the main directory.
+- Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file. 
+- Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
+- Comment out the default database configuration.
+- Save all files and make migrations.
+- Add the Cloudinary URL to env.py
+- Add the Cloudinary libraries to the list of installed apps.
+- Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+- Link the file to the templates directory in Heroku.
+- Change the templates directory to TEMPLATES_DIR
+- Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
+
+### Create files & directories
+- Create a requirements.txt file
+- Create directories in the main directory, eg: static, templates.
+- Create a "Procfile" in the main directory and add the following: web: gunicorn project_name.wsgi
+- Make sure the Procfile is capitalized and only has one line.
+
+### Update Heroku Config Vars -- JOSIP CAN YOU LOOK AT THIS?
+Add the following Config Vars in Heroku:
+- SECRET_KEY value 
+- CLOUDINARY_URL
+- PORT = 8000
+- DISABLE_COLLECTSTATIC = 1
+- DATABASE_URL value
+
+### Deploy
+- Make sure DEBUG = False in settings.py
+- Go to the deploy tab on Heroku and connect to GitHub, then to the required repository. 
+- Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need to be re-deployed each time the GitHub repository is updated.
+- Click 'Open App' to view the deployed site live.
+
+# Criteria
+
+In this section, we will briefly discuss how our team addressed the following applicable criteria:
 
 <details>
-<summary>🏳️‍🌈 <strong>The project demonstrates an impact on the LGBTQIA+ community</strong></summary>
-Much of the challenges faced by the LGBTQIA+ community is being misunderstood. This platform tries to remedy that. The goal is to educates about the communities history, it's most important milestones and provides a place and communicate to people from the community itself.
+<summary>🏳️‍🌈 <strong>Impact on the LGBTQIA+ community</strong></summary>
+Many of the challenges faced by the LGBTQIA+ community are misunderstood, which this platform tries to remedy. Our goal is to educate users about the community's history, pivotal milestones and important trailblazers while providing a safe space for people to communicate with others.
 <br>
 <br>
 </details>
 
 <details>
-<summary>🏳️‍🌈 <strong>The project is realistic and has real world value</strong></summary>
-The base of the platform lies in the LGBTQIA+ history which is outlined on a timeline/history page. The creation of which will take some initial time. But ones set up it will be set. The real world value can be found in the educational piece and bringing together from within the LGBTQIA+ community, as well as from outside the community by sharing stories and experiences in the blog section.
+<summary>🏳️‍🌈 <strong>Realistic and real-world value</strong></summary>
+The basis of the platform lies in the history of the LGBTQIA+ community, which is outlined on the history page with a timeline. The website enriches society through education and sharing stories and experiences that bring users together, both within and outside the LGBTQIA+ community.
 <br>
 <br>
 </details>
    
 <details>
-<summary>🏳️‍🌈 <strong>The project has excellent design and layout</strong></summary>
-For the design and layout we have tried to stay close to the different flags the community has waved over the years and which are still used to this day. Important to the choices in layout, is the combination of compatibality on both desktop and mobile.
+<summary>🏳️‍🌈 <strong>Excellent design and layout</strong></summary>
+Our team's goal was to stay close to the different flags the LGBTQIA+ community has waved over the years, some of which are still in use today. Responsiveness was a top priority in our design an layout and attempted to make all pages compatible on various devices.
 <br>
 <br>
 </details>
 
 <details>
-<summary>🏳️‍🌈 <strong>The project is presented to the judges in a professional manner</strong></summary>
+<summary>🏳️‍🌈 <strong>Professional presentation to the judging panel - EDIT!!</strong></summary>
 TBD
 <br>
 <br>
 </details>
 
 <details>
-<summary>🏳️‍🌈 <strong>The project demonstrates innovation and creativity</strong></summary>
+<summary>🏳️‍🌈 <strong>Demonstrates innovation and creativity -- LOOK AT 'BENCHED' FEATURES</strong></summary>
 <br>
-Current innovation/creativity
+Current features:
 <ul>
-<li>interactive timeline (with clickable entries)</li>
-<li>interactive blog posts</li>
-<li>easily accessable on both desktop/mobile</li>
-<li>[benched] it provides a help section for community members in need</li>
-<li>[benched] a listing of important media which can be found online</li>
-<li>[benched] section showcasing relevant current/recent news articles</li>
+<li>Interactive timeline (with clickable entries)</li>
+<li>Interactive blog posts</li>
+<li>Easy access on both desktop and mobile devices</li>
+<li>[benched] Help section for community members in need</li>
+<li>[benched] List of important media found online</li>
+<li>[benched] Showcase of relevant current and recent news articles</li>
 </ul>
 </details>
 <br>
 
-# ABOUT SUBMISSION
+# Submission
 
-## Intro
+## Introduction
 
-Prideful Pixels presents to you Chronicals of Pride, a walk through the history of the LGBTQIA+ movement and a platform to bring people together from inside and outside the community. Chronicals of Pride is an educational platform that showcases the biggest milestones of the LGBTQIA+ community across the past century+.<br>
+Prideful Pixels unveils Chronicals of Pride, a walk through history of the LGBTQIA+ movement and a platform to bring people together within the community as well as those outside it. Chronicals of Pride is an educational platform that showcases more than a century of the important milestones for the LGBTQIA+ community.<br>
 <br>
-It provides an interactive timeline of the community which is easily accessable on both desktop and mobile. Visitors will be able to follow the development of the movement through these past decades to what it is today. Through the blog section members from inside and outside the community can share stories, comment and support each other where needed. Through flashcards, We will also answer the very real question of: "where DO the different colors stand for in the various rainbow flags?". 
+The interactive timeline provides a journey through the community's history enabling visitors to follow the development of the movement from the past decades to today. Users can access the blog section to share personal stories, support and comments, while the flashcards can answer pertinent questions inquiring minds might have. Site visitors can contact Prideful Pixels and share their own story or questions by submitting a contact form, anonymously if they so choose, to the admin team.
 
 ## Goal
 
-The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:
+The main objective of Chronicals of Pride is to be a safe space for users in the LGBTQIA+ community and outside of it to learn some of the history and important events and people of the movement in a safe environment. The Prideful Pixels team strived to provide a concise understanding of this month's hackathon theme by addressing the following aspects:
 <br>
 <details>
 <summary>➡️ Problem Statement</summary>
-Being misunderstood is one of the main challenges of the LGBTQIA+ community. The flipside of that coin is being misinformed or not informed enough. We need to design a platform that bridges this knowledge gap and bring together from inside and outside the community.
+Being misunderstood is can be one of the main challenges for individuals in the LGBTQIA+ community and for the community as a whole. At times, this can be a product of misinformation or lack thereof. Our goal as the Prideful Pixels team was to bridge this knowledge gap and foster interaction among people within and outside of the LGBTQIA+ community.
 </details>
 <br>
 
 <details>
-<summary>➡️ Objective(s)</summary>
+<summary>➡️ Objectives</summary>
   <ul>
-  <li>easy to access (desktop and mobile)</li>
-  <li>provide relevant information</li>
-  <li>includes an element of fun</li>
-  <li>allows for interactivity between visitors/readers</li>
+  <li>Responsiveness (easy accessibility on desktop and mobile devices)</li>
+  <li>Provide relevant information</li>
+  <li>Ensure an interactive, fun environment</li>
+  <li>Enable visitors to interact</li>
   </ul>
 </details>
 <br>
 
 <details>
 <summary>➡️ Target Audience</summary>
-Chronicles of Pride is mostly for a "cold audience". People that do not necessarily know too much the LGBTQIA+ history but that are open to learn in an easy/compacted way. At the same time we aim for people from the LGBTQIA+ community that are willing to share their experiences and share them to educate.
+On one hand, Chronicles of Pride was designed to target a 'cold audience' who might not have much knowledge of LGBTQIA+ history but who are open to learning. Similarly, the site provides a platform for people in the LGBTQIA+ community to share their experiences and help educate others.
 </details>
 <br>
 
 <details>
 <summary>➡️ Benefits</summary>
-Chronicles of Pride provides an easy and accessable way to learn about LGBTQIA+'s history, some fun flag facts and interact with people from the community. It is purposefully low key with the intend to lower any boundries that may exist.
+Chronicles of Pride shares an easy, accessable way to learn about the history of the LGBTQIA+ community, as well as fun facts about flags and noted trailblazers. Users can interact with people in their community in a low-key atmosphere, thus helping break any boundaries that may exist.
 </details>
 
 ## Tech
 
-In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
+The tech section provides information regarding the technology stack, dependencies, and other technical details related to the project and used in the implementation of the Chronicals of Pride website.
 
 ## Resources Used
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Source 1](https://www.google.com/) | Where was it used | What did it do |
-| [Human Rights Campaign](https://www.hrc.org/resources/lgbtq-pride-flags) | Rainbow cards | providing flag info and context |
-| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | model creation | creating models |
-| [Mailtrap.io](https://mailtrap.io/) | Contact form | To link the contact form to receive emails |
-| [Youtube](https://www.youtube.com/watch?v=dnhEnF7_RyM) | Contact form | tutorial for troubleshooting the contact form |
-| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | converting images from AVIF to JPG |
-| [SVG to PNG](https://svgtopng.com/) | across website | converting images from SVG to PNG |
-| [JPG to PNG](https://jpg2png.com/) | across website| converting images from JPG to PNG |
-| [TinyJPG](https://tinyjpg.com/) | across website | surpressing images |
-| [Font Awesome](https://fontawesome.com/) | across website | icons inspiration |
+| [Source name](https://www.google.com/) | Where was it used | What did it do |
+| [Human Rights Campaign](https://www.hrc.org/resources/lgbtq-pride-flags) | Rainbow cards | Provided flag info and context |
+| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Models | Created models |
+| [Mailtrap.io](https://mailtrap.io/) | Contact form | Linked  contact form to receive emails |
+| [YouTube](https://www.youtube.com/watch?v=dnhEnF7_RyM) | Contact form | Tutorial to troubleshoot contact form functionality |
+| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | Converted images from AVIF to JPG |
+| [SVG to PNG](https://svgtopng.com/) | Across website | Converted images from SVG to PNG |
+| [JPG to PNG](https://jpg2png.com/) | Across website| Converted images from JPG to PNG |
+| [TinyJPG](https://tinyjpg.com/) | Across website | Surpressed images |
+| [Font Awesome](https://fontawesome.com/) | Across website | Inspiration for icons |
 | [Voda](https://www.voda.co/) | Some of our favourite people | Support page |
 | [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) | Some of our favourite people | Support page |
 | [Bicycle Adventure Club](https://bicycleadventureclub.co.uk/) | Some of our favourite people | Support page |
-| [Fandom](https://lgbtqia.fandom.com/wiki/LGBTQIA%2B_Wiki) | History | providing main events |
-| [Fonts Google](https://fonts.google.com/ ) | across website | Font selection |
-| [Coolors](https://coolors.co/) | across website | Color palet selection |
+| [Fandom](https://lgbtqia.fandom.com/wiki/LGBTQIA%2B_Wiki) | History | Provided main events |
+| [Fonts Google](https://fonts.google.com/ ) | A website | Font selection |
+| [Coolors](https://coolors.co/) | Across website | Colour palette selection |
+| [PFLAG](https://pflag.org/intlfamilygroups/) | Contact page | Help section |
 
-### Acknowledgements
+### Acknowledgements -- EVERYONE PLEASE ADD / CHANGE WHAT YOU WANT
+Firstly, we would like to acknowledge XXXXX <strong>(Kiree, your contact / people you have personal stories from?)</strong> for their willingness to share their story as a LGBTQIA+ individual. By showcasing stories like these, we hope Chronicles of Pride can facilitate understanding, foster interpersonal compassion and quell misinformation and hatred in the media. 
+
+Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.
+
 
 We would like to acknowledge three amazing groups of people that have permitted us to link their sites, each of them has a direct link to the LGBTQIA+ community and we thank them for their permission:
 

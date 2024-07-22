@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}Contact{% endblock %}
 
 {% block content %}
@@ -33,8 +35,12 @@
     </form>
 </div> -->
 
-<div>
-    <form class="contact-form" method="post" action="{% url 'contact' %}">
+<div class="my-5">
+    <div class="d-flex justify-content-end contact-btns">
+        <button id="contactBtn" class="ms-3 p-2 px-3">Contact Us</button>
+        <button id="helpBtn" class="ms-3 p-2 px-3">Help</button>
+    </div>
+    <form id="contactForm" class="contact-form" method="post" action="{% url 'contact' %}">
         {% csrf_token %}
         {{ form.non_field_errors }}
         <p>{{ form.name.label_tag }} {{ form.name }}</p>
@@ -44,8 +50,92 @@
             {{ form.anonymous }} 
             <label for="id_anonymous">{{ form.anonymous.label }}</label>
         </div>
-        <button class="submit-btn">Submit</button>
+        <button class="submit-btn px-4">Submit</button>
     </form>
+    <div id="helpSection" class="container contact-form" style="display:none;">
+        <h2 class="mb-4">Help Lines</h2>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h3><bold>PFLAG</bold></h3>
+                <p class="d-flex">
+                    <bold>Australia:</bold>
+                    <a href="https://pflagaustralia.org.au/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG Australia page (opens in a new tab)">PFLAG|AUS</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Belgium:</bold>
+                    <a href="http://www.telsquels.be/" target="_blank" rel="noopener"
+                    aria-label="Link to Tels Quels Belgium page (opens in a new tab)">Tels Quels|BELG</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Australia:</bold>
+                    <a href="https://pflagaustralia.org.au/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG Australia page (opens in a new tab)">PFLAG|AUS</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Canada:</bold>
+                    <a href="https://pflagcanada.ca/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG Canada page (opens in a new tab)">PFLAG|CA</a>
+                </p>
+                <p class="d-flex">
+                    <bold>China:</bold>
+                    <a href="https://www.chuse8.com/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG China page (opens in a new tab)">PFLAG|CN</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Europe:</bold>
+                    <a href="https://www.ilga-europe.org/" target="_blank" rel="noopener"
+                    aria-label="Link to ILGA-Europe page (opens in a new tab)">ILGA-Europe</a>
+                </p>
+                <p class="d-flex">
+                    <bold>France:</bold>
+                    <a href="https://www.asso-contact.org/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG France page (opens in a new tab)">PFLAG|FR</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Israel:</bold>
+                    <a href="https://www.tehila.org.il/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG Israel page (opens in a new tab)">PFLAG|IL</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Jamaica:</bold>
+                    <a href="https://www.equalityjamaica.org/" target="_blank" rel="noopener"
+                    aria-label="Link to J-FLAG Jamaica page (opens in a new tab)">J-FLAG|JAM</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Japan:</bold>
+                    <a href="https://lgbt-family.or.jp/" target="_blank" rel="noopener"
+                    aria-label="Link to J-FLAG Japan page (opens in a new tab)">PFLAG|JPN</a>
+                </p>
+
+
+
+                <p class="d-flex">
+                    <bold>United Kingdom:</bold>
+                    <a href="http://www.pflag.co.uk/" target="_blank" rel="noopener"
+                    aria-label="Link to Stonewall UK page (opens in a new tab)">PFLAG|UK</a>
+                </p>
+                <p class="d-flex">
+                    <bold>United States:</bold>
+                    <a href="https://pflag.org/" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG United States page (opens in a new tab)">PFLAG|USA</a>
+                </p>
+                <p class="d-flex">
+                    <bold>Vietnam:</bold>
+                    <a href="https://www.facebook.com/pflagvn" target="_blank" rel="noopener"
+                    aria-label="Link to PFLAG Vietnam Facebook page (opens in a new tab)">PFLAG|VN|Facebook</a>
+                </p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h3><bold>Organizations</bold></h3>
+                <p class="d-flex">
+                    <bold>Australia:</bold>
+                    <a href="https://www.minus18.org.au/" target="_blank" rel="noopener"
+                    aria-label="Link to Minus18 in Australia page (opens in a new tab)">MINUS18</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Messages -->
@@ -65,8 +155,30 @@
         if (popup) {
             setTimeout(function() {
                 popup.style.display = 'none';
-            }, 1000); 
+            }, 3000); 
         }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactBtn = document.getElementById('contactBtn');
+        const helpBtn = document.getElementById('helpBtn');
+        const contactForm = document.getElementById('contactForm');
+        const helpSection = document.getElementById('helpSection');
+    
+        // Initially show the contact form
+        contactForm.style.display = 'block';
+        helpSection.style.display = 'none';
+    
+        // Add click event listeners to buttons
+        contactBtn.addEventListener('click', function() {
+            contactForm.style.display = 'block';
+            helpSection.style.display = 'none';
+        });
+    
+        helpBtn.addEventListener('click', function() {
+            contactForm.style.display = 'none';
+            helpSection.style.display = 'block';
+        });
     });
 
 </script>

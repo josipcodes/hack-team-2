@@ -1,4 +1,9 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block content %}
+
 <div class="container-fluid d-flex justify-content-center mt-5">
   <h1>Pride Movement History</h1>
 </div>
@@ -33,17 +38,12 @@
   <div class="card-border-wrapper">
     <div class="card-hist-info d-flex align-items-center">
       <div class="card-hist-info-text">
-        <p class="p-3 mt-4">
+        <p class="p-2 px-4 mt-4">
           This page provides highlights of significant moments in the Pride
           history. Click on any dates in the timeline events to expand and find
           information about each event.
         </p>
-        <p class="p-3">
-          This page will help you navigate through some of the major milestones
-          in the events that has lead us till today. Reflecting on the history
-          and progress of LGBTQ+ rights.
-        </p>
-        <p class="p-3">
+        <p class="p-2 px-4">
           For more detailed information, check out the additional resources and
           links to important articles about it available through the link under
           the content.
@@ -53,19 +53,35 @@
   </div>
 </div>
 
+<!-- Scroll to top btn -->
+<button id="scrollBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const historyEvents = document.querySelectorAll(".history-event");
-
+        const scrollBtn = document.getElementById("scrollBtn");
+    
         historyEvents.forEach((event) => {
           const dateElement = event.querySelector(".history-date");
           dateElement.addEventListener("click", function () {
             event.classList.toggle("expanded");
           });
         });
+    
+        // Show/hide the button when scrolling
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > window.innerHeight) {
+            scrollBtn.style.display = "block";
+          } else {
+            scrollBtn.style.display = "none";
+          }
+        });
+    
+        // Scroll to top when the button is clicked
+        scrollBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
       });
     </script>
 
-    {% endblock %}
-  </div>
-</div>
+{% endblock %}
