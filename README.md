@@ -145,6 +145,7 @@ Video presentation.
 <details>
 <summary>🏳️‍🌈 <strong>Demonstrates innovation and creativity</strong></summary>
 We have created a historic timeine for our newer members to learn about their own roots. To also add a bit of freshness, our website gathers the latest news from the community for the ease of access. 
+
 <br>
 Current features:
 <ul>
@@ -153,9 +154,8 @@ Current features:
 <li>Easy access on both desktop and mobile devices</li>
 <li>Interactive flash cards designed to educate</li>
 <li>Contact form which allows anonymous outreach</li>
-<li>[originally benched] Help section for community members in need</li>
-<li>[benched] List of important media found online</li>
-<li>[originally benched] Showcase of relevant current and recent news articles</li>
+<li>Help section for community members in need</li>
+<li>Showcase of relevant current and recent news articles</li>
 <li>Interactive team page</li>
 </ul>
 </details>
@@ -165,7 +165,7 @@ Current features:
 
 ## Introduction
 
-Prideful Pixels unveils Chronicals of Pride, a walk through history of the LGBTQIA+ movement and a platform to bring people from the community as well as those outside it together. Chronicals of Pride is primarily educational platform that showcases more than a century of the important milestones for the LGBTQIA+ community.<br>
+Prideful Pixels unveils Chronicals of Pride, a walk through history of the LGBTQIA+ movement and a platform to bring people from the community as well as those outside it together. Chronicals of Pride is primarily an educational platform that showcases more than a century of the important milestones for the LGBTQIA+ community.<br>
 <br>
 The interactive timeline provides a journey through the community's history enabling visitors to follow the development of the movement from the past decades to today. Users can access the blog section to share personal stories, support and comments, while the flashcards can answer pertinent questions inquiring minds might have. Site visitors can contact Prideful Pixels and share their own story or questions by submitting a contact form, anonymously if they so choose, to the admin team. At the same time, we make the latest global news regarding the community easily available.
 
@@ -207,11 +207,19 @@ The tech section provides information regarding the technology stack, dependenci
 
 | Source | Notes |
 | --- | --- |
-| [Source name](https://www.google.com/) | What did it do |
 | [ElephantSQL](https://www.elephantsql.com) | Used as the Postgres database |
 | [Heroku](https://dashboard.heroku.com) | Used for deployment |
 | [Cloudinary](https://cloudinary.com) | Used for media storage |
-
+| [Miro](https://miro.com/) | Across website | Plan/Visualise our product as a team  |
+| [Google Docs](https://docs.google.com/) | Across website | Plan/Visualise our product as a team  |
+| [Visual Studio Code](https://code.visualstudio.com/) | Across Website | Code Editor |
+| [Gitpod](https://gitpod.io/) | Across website | Code Editor |
+| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Models | Created models |
+| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | Converted images from AVIF to JPG |
+| [SVG to PNG](https://svgtopng.com/) | Across website | Converted images from SVG to PNG |
+| [JPG to PNG](https://jpg2png.com/) | Across website| Converted images from JPG to PNG |
+| [TinyJPG](https://tinyjpg.com/) | Across website | Surpressed images |
+| [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) | Across website | Bootstrap5 |
 
 
 
@@ -219,15 +227,9 @@ The tech section provides information regarding the technology stack, dependenci
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Source name](https://www.google.com/) | Where was it used | What did it do |
 | [Human Rights Campaign](https://www.hrc.org/resources/lgbtq-pride-flags) | Rainbow cards | Provided flag info and context |
-| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Models | Created models |
 | [Mailtrap.io](https://mailtrap.io/) | Contact form | Linked  contact form to receive emails |
 | [YouTube](https://www.youtube.com/watch?v=dnhEnF7_RyM) | Contact form | Tutorial to troubleshoot contact form functionality |
-| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | Converted images from AVIF to JPG |
-| [SVG to PNG](https://svgtopng.com/) | Across website | Converted images from SVG to PNG |
-| [JPG to PNG](https://jpg2png.com/) | Across website| Converted images from JPG to PNG |
-| [TinyJPG](https://tinyjpg.com/) | Across website | Surpressed images |
 | [Font Awesome](https://fontawesome.com/) | Across website | Inspiration for icons |
 | [Voda](https://www.voda.co/) | Some of our favourite people | Support page |
 | [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) | Some of our favourite people | Support page |
@@ -237,12 +239,28 @@ The tech section provides information regarding the technology stack, dependenci
 | [Coolors](https://coolors.co/) | Across website | Colour palette selection |
 | [PFLAG](https://pflag.org/intlfamilygroups/) | Contact page | Help section |
 | [History Timeline](https://freefrontend.com/css-timelines/) | History Page | Histoy Timeline section idea|
+| [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | READme | Help with writing the READme |
+| [Djecrety](https://djecrety.ir/) | Across website | Django key generator |
+| [Stack Overflow](https://stackoverflow.com/questions/11481499/django-iterate-number-in-for-loop-of-a-template) | Blog page | Loop iteration |
+| [Stack Overflow](https://stackoverflow.com/questions/78689770/django-django-contrib-messages-add-new-constant-messages-notice) | Blog page | Messages used for notifications |
+| [Belong to](https://www.belongto.org/) | Rainbow cards | Content |
+| [Wikipedia](https://www.wikipedia.org/) | History page | Content |
+| [Verywell Mind](https://www.verywellmind.com/) | History page | Content |
+| [Readers Digest](https://www.rd.com/) | History page | Content |
+| [Business Insider](https://www.businessinsider.com/) | History page | Content |
+| [High Speed Training](https://www.highspeedtraining.co.uk/) | History page | Content |
+| [Stacker](https://stacker.com/) | History page | Content |
+| [The Center](https://gaycenter.org/) | Rainbow cards | Content |
+| [ISPCC](https://www.ispcc.ie/) | Rainbow cards | Content |
+| [BCC](https://www.bbc.co.uk/) | Rainbow cards| Content |
+| [Your Dictionary](https://www.yourdictionary.com/) | Rainbow cards | Content |
+| [Marriage equality](https://www.marriagequality.ie/getinformed/legal/) | Rainbow cards | Content |
+| [Nevada Today](https://www.unr.edu/nevada-today/blogs/2021/adding-intersex-representation-to-the-pride-flag) | Rainbow cards | Content |
+| [Genderqueer](https://genderqueerid.com/about-flag) | Rainbow cards | Content |
+| [USA Today](https://eu.usatoday.com/story/news/2024/06/05/nonbinary-gender-queer-fluid-flag-colors/73819327007/) | Rainbow cards | Content |
 
-### Acknowledgements -- EVERYONE PLEASE ADD / CHANGE WHAT YOU WANT
-Firstly, we would like to acknowledge XXXXX <strong>(Kiree, your contact / people you have personal stories from?)</strong> for their willingness to share their story as a LGBTQIA+ individual. By showcasing stories like these, we hope Chronicles of Pride can facilitate understanding, foster interpersonal compassion and quell misinformation and hatred in the media. 
-
-Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.
-
+### Acknowledgements
+Firstly, we would like to acknowledge Pink News for sharing an amazing story of a LGBTQIA+ individual that so many of the community can relate to. By showcasing stories like these, we hope Chronicles of Pride can facilitate understanding, foster interpersonal compassion and quell misinformation and hatred in the media.
 
 We would like to acknowledge three amazing groups of people that have permitted us to link their sites, each of them has a direct link to the LGBTQIA+ community and we thank them for their permission:
 
@@ -251,3 +269,7 @@ We would like to acknowledge three amazing groups of people that have permitted 
 * [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) -  Youtube channel with lots of interesting facts and information about the queer community.
 
 * [Voda](https://www.voda.co/blog) - An amazing app made by the queer community for the queer community to support the mental mental health of members of the LGBTQIA+ community.
+
+* Special thanks to Mia Rasmussen for creating the logo, hero image and blog default image.
+
+Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.
