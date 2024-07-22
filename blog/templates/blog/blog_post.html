@@ -15,11 +15,7 @@
             <div class="row g-3">
                 <div class="blog-header-container">
                     <h1 class="post-title blog-header-overlay">{{ post.title }} by {{ post.author }}</h1>
-                    {% if post.image %}
-                    <img class="card-img-top blog-header-img" src="{{ post.image.url }}" alt="Blog Image">
-                    {% else %}
-                    <img src="https://imgur.com/jVraxDv.png" class="card-img-top blog-header-img" alt="Placeholder Image">
-                    {% endif %}
+                    <img src="https://imgur.com/mmg56eP.png" class="card-img-top blog-header-img" alt="Placeholder Image">
                 </div>
             </div>
 			<!-- Blog post main area -->
@@ -30,6 +26,9 @@
                         <div class="col-md-6">
                             <h2 class="m-3">{{ post.excerpt }}</h2>
                         </div>
+                        {% if post.image %}
+                            <img class="card-img-top blog-header-img" src="{{ post.image.url }}" alt="Blog Image">
+                        {% endif %}
                         <div class="col-md-6 blog-contact d-flex justify-content-center align-items-center">
                             <h3 class="m-2">
                                 <strong>Give us a shout!</strong> If you wish to share something with us, don't forget to visit our <a class="mt-2" href="{% url 'contact' %}">Contact section</a>!
@@ -67,8 +66,9 @@
             <div class="col-12 col-sm-9 card mb-4 mt-3 bg-transparent border-0">
                 <h3>Comments:</h3>
                 {% else %}
-                      <h3>To leave a comment please login!</h3>
-                      <a href="{% url 'account_login' %}" rel="noopener" aria-label="Login Page"></a>
+                      <h3>To leave a comment please
+                          <a href="{% url 'account_login' %}" rel="noopener" aria-label="Login Page">login!</a>
+                      </h3>
                     {% endif %}
                 <div class="mb-md-5 mb-md-0">
                     <div class="card-body p-0 pt-2">
