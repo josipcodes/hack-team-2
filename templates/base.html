@@ -37,7 +37,7 @@
       <!-- Brand Name -->
       <a class="col-1 navbar-brand mt-lg-2" href="{% url 'home' %}">
         {% comment %} <span class="brand ms-3">Chronicles of Pride</span> {% endcomment %}
-         <img src="{% static "../static/images/logo.png" %}">
+         <img src="{% static "../static/images/logo.png" %}" alt="Page Logo and clickable for home">
       </a>
       <!-- Toggle Button for Mobile View -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -144,17 +144,17 @@
       <div class="col-lg-4 footlinks">
         <h3 class="footer-title">Some of our favourite people:</h3>
         <div class="footlinks-content">
-          <div class="footlinks-icons pt-2">
+          <div class="footlinks-icons">
             <a href="https://bicycleadventureclub.co.uk/" target="_blank" rel="noopener"
-              aria-label="Visit the Bicycle Adventure Club page (opens in a new tab)">
+              aria-label="Visit the Bicycle Adventure Club page (opens in a new tab)" class="top-left">
               <img src="../../static/images/bikeclub.jpg" alt="Bicycle Adventure Club logo" class="bike">
             </a>
             <a href="https://www.youtube.com/@queeeerchameleon" target="_blank" rel="noopener"
-              aria-label="Visit the Queer Chameleon YouTube channel (opens in a new tab)">
+              aria-label="Visit the Queer Chameleon YouTube channel (opens in a new tab)" class="center-right">
               <img src="../../static/images/QC2.png" alt="Queer Chameleon logo" class="chameleon">
             </a>
             <a href="https://www.voda.co/blog" target="_blank" rel="noopener"
-              aria-label="Try out Voda (opens in a new tab)">
+              aria-label="Try out Voda (opens in a new tab)" class="bottom-left">
               <img src="../../static/images/vodac.png" alt="Voda mental health app logo" class="voda">
             </a>
           </div>

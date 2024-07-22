@@ -208,25 +208,27 @@ footer {
 }
 
 .footlinks-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-top: 2rem;
 }
 
 .footlinks-icons a {
+  position: absolute;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 140px;
+  height: 140px;
   text-decoration: none;
   transition: all 0.3s ease;
-  padding: 2px;
+  padding: 15px;
   border-radius: 50%;
 }
 
 .footlinks-icons a:hover,
-.footlinks-icons a:focus {
+.footlinks-icons a:focus-visible {
   outline: none;
   box-shadow: 0 0 0 4px rgba(32, 5, 152, 0.5);
 }
@@ -240,7 +242,7 @@ footer {
 }
 
 .footlinks-icons a:hover img,
-.footlinks-icons a:focus img {
+.footlinks-icons a:focus-visible img {
   transform: scale(1.2);
 }
 
@@ -248,6 +250,22 @@ footer {
 .footlinks-icons .chameleon,
 .footlinks-icons .voda {
   border: none;
+}
+
+.footlinks-icons .top-left {
+  top: 0;
+  left: 0;
+}
+
+.footlinks-icons .center-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.footlinks-icons .bottom-left {
+  bottom: 0;
+  left: 0;
 }
 
 .copyright {
