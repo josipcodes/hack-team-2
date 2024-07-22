@@ -1,22 +1,24 @@
 body {
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
 }
 
 .alert-dismissible {
   display: none;
 }
 
-.alert, .popup-message, .alert-success {
+.alert,
+.popup-message,
+.alert-success {
   width: 40vw;
   position: fixed;
   top: 0;
   padding: 10px;
   background-color: #FFF;
   border: 5px solid transparent;
-  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
-  #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
+  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf,
+      #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
   color: #000;
-  margin: 0 27%;
+  margin: 0 auto;
   margin-top: 125px;
 }
 
@@ -35,22 +37,25 @@ body {
   margin-left: -40px;
 }
 
-nav, footer {
+nav,
+footer {
   background-color: #FFF;
   border-bottom: 5px solid transparent;
-  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
-  #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
+  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf,
+      #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
   box-shadow: 0 0 15px #b8f9ff;
 }
 
 /* BUTTONS */
-.hero-btn, .submit-btn {
+.hero-btn,
+.submit-btn {
   background-color: #fff;
   border: 2px solid #000;
   box-shadow: 3px 3px 1px #000;
 }
 
-.hero-btn:hover, .submit-btn:hover {
+.hero-btn:hover,
+.submit-btn:hover {
   box-shadow: none;
 }
 
@@ -62,8 +67,8 @@ nav, footer {
 
 .rainbow-btn {
   border: 4px solid transparent;
-  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
-  #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
+  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf,
+      #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
   box-shadow: 3px 3px 1px #000;
 }
 
@@ -97,11 +102,6 @@ nav, footer {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
-}
-
-.rainbow-box .btn {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
 }
 
 .rainbow-box .btn {
@@ -239,12 +239,6 @@ footer {
   transform: scale(1.2);
 }
 
-.footlinks-icons .bike,
-.footlinks-icons .chameleon,
-.footlinks-icons .voda {
-  border: none;
-}
-
 .footlinks-icons .top-left {
   top: 0;
   left: 0;
@@ -265,10 +259,10 @@ footer {
   background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
 }
 
-@media (max-width: 650px){
-.contact-form {
-  margin: 0 auto;
-  max-width: 95%;
-  padding: 12px;
-}
+@media (max-width: 650px) {
+  .contact-form {
+    margin: 0 auto;
+    max-width: 95%;
+    padding: 12px;
+  }
 }

@@ -7,13 +7,19 @@
 <section class="container-fluid about-banner text-center mt-5">
     <h1>Meet the team!</h1>
 </section>
-
+<div class="container"> 
+  <div class="light d-flex">
+    <h2 class="light">light <i class="fas fa-lightbulb light"></i> up!</h2>
+  </div>
+</div>
 <div class="banner">
   <div class="slider" style="--quantity: 7">
     {% comment %} Red {% endcomment %}
     <div class="item" style="--position: 1">
       <div class="spacing">
-        <div class="polariod">
+        <div class="polariod" data-name="Chris Niblock" data-bio="Experienced Manager turned aspiring Full Stack Developer, 
+        skilled in HTML, CSS, JavaScript, Python." data-info="Go take a look at my github and then connect on LinkedIn!" 
+        data-link1="https://github.com/cniblock" data-link2="www.linkedin.com/in/chris-niblock-515019270">
             <div class="card-axis red">
                 <div>
                   <img class="mt-1" src="{% static 'images/team/chris.png' %}" alt="Team member: Chris">
@@ -23,7 +29,6 @@
                 <div class="content">
                     <div>
                         <h3>Bio:</h3>
-                        <p>Loads of random facts about me</p>
                     </div>
                 </div>
             </div>
@@ -33,7 +38,11 @@
     {% comment %} Orange {% endcomment %}
     <div class="item" style="--position: 7">
       <div class="spacing">
-        <div class="polariod">
+        <div class="polariod" data-name="Maarten Ridder" data-bio="Dutch grown new coder, not just -green behind the ears- 
+        but also with green fingers (Like a true Dutch person, 7 years of tulip experience). Dublin based and switched to 
+        the life of coding in June 2024. Started the 5P coding course and hoping to finish early on in 2025." 
+        data-info="Go take a look at my github and then connect on LinkedIn!"  data-link1="https://github.com/MJRidder" 
+        data-link2="https://www.linkedin.com/in/maartenridder1/">
             <div class="card-axis orange">
                 <div>
                   <img class="mt-1" src="{% static 'images/team/maarten.png' %}" alt="Team member: Maarten">
@@ -43,7 +52,6 @@
                 <div class="content">
                     <div>
                         <h3>Bio:</h3>
-                        <p>Lorum</p>
                     </div>
                 </div>
             </div>
@@ -53,7 +61,9 @@
     {% comment %} Yellow {% endcomment %}
     <div class="item" style="--position: 6">
       <div class="spacing">
-        <div class="polariod">
+        <div class="polariod" data-name="Josip Potnar" data-bio="Loads of random facts about me" 
+        data-info="Go take a look at my github and then connect on LinkedIn!" data-link1="https://github.com/josipcodes" 
+        data-link2="https://www.linkedin.com/in/josip-potnar/">
             <div class="card-axis yellow">
                 <div>
                   <img class="mt-1" src="{% static 'images/team/josip.png' %}" alt="Team member: Josip">
@@ -63,7 +73,6 @@
                 <div class="content">
                     <div>
                         <h3>Bio:</h3>
-                        <p>Lorum</p>
                     </div>
                 </div>
             </div>
@@ -73,7 +82,11 @@
     {% comment %} Green {% endcomment %}
     <div class="item" style="--position: 5">
       <div class="spacing">
-        <div class="polariod">
+        <div class="polariod" data-name="Kayla Smith" data-bio="Barcelona-based programmer with previous experience in the
+         public health sector. Enthusiastic about developing coding skills, learning new languages and working with
+          others to create useful applications for society. Enjoys handicrafts, cooking and the NFL." data-info="Go take a 
+          look at my github and then connect on LinkedIn!" data-link1="https://github.com/Kaylaesmith1" 
+          data-link2="https://www.linkedin.com/in/kayla-smith-ab1595101/">
             <div class="card-axis green">
                 <div>
                   <img class="mt-1" src="{% static 'images/team/kayla.png' %}" alt="Team member: Kayla">
@@ -83,7 +96,6 @@
                 <div class="content">
                     <div>
                         <h3>Bio:</h3>
-                        <p>Lorum</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +105,9 @@
     {% comment %} Blue {% endcomment %}
     <div class="item" style="--position: 4">
       <div class="spacing">
-        <div class="polariod">
+        <div class="polariod" data-name="Mia Rasmussen" data-bio="Denmark-based new programmer. I always give 110% and 
+        always try my best. People describe me as a workaholic and creative." 
+        data-info="Go take a look at my github and then connect on LinkedIn!" data-link1="https://github.com/MiaRasmussen05" data-link2="https://www.linkedin.com/in/mia-rasmussen-088091226/">
             <div class="card-axis blue">
                 <div>
                   <img class="mt-1" src="{% static 'images/team/mia.png' %}" alt="Team member: Mia Rasmussen">
@@ -103,7 +117,6 @@
                 <div class="content">
                     <div>
                         <h3>Bio:</h3>
-                        <p>Lorum</p>
                     </div>
                 </div>
             </div>
@@ -113,17 +126,18 @@
     {% comment %} Indigo {% endcomment %}
     <div class="item" style="--position: 3">
       <div class="spacing">
-        <div class="polariod">
+        <div class="polariod" data-name="Kiree Bellamy" data-bio="English born, New Zealand raised, Non-binary coder." 
+        data-info="Go take a look at my github and then connect on LinkedIn!" data-link1="https://github.com/Swewi" 
+        data-link2="https://www.linkedin.com/in/kireebellamy/">
             <div class="card-axis indigo">
                 <div>
-                  <img class="mt-1" src="{% static 'images/team/kiree.jpg' %}" alt="Team member: Kiree">
+                  <img class="mt-1" src="{% static "images/team/kiree.jpg" %}" alt="Team member: Kiree">
                     <h3 class="title">Kiree Bellamy</h3> 
                     <i class="fas fa-sync-alt"></i>
                 </div>
                 <div class="content">
                     <div>
                         <h3>Bio:</h3>
-                        <p>English born, New Zealand raised, Non-binary coder.</p>
                     </div>
                 </div>
             </div>
@@ -134,7 +148,9 @@
     <div class="item" style="--position: 2">
       <div>
         <div class="spacing">
-          <div class="polariod">
+          <div class="polariod" data-name="Patrick O'Doherty" data-bio="First time doing a hackathon, but having millions
+           of great ideas, I am ready to start building." data-info="Go take a look at my github and then connect on LinkedIn!" 
+           data-link1="https://github.com/patrickaod" data-link2="https://www.linkedin.com/in/patrickaod/?fbclid=IwAR0PgIkBoLeeqJyijWopVM1rkVn3iHNejqb_DPb0P5GGHPrvFWlPXaWhrAc">
               <div class="card-axis violet">
                   <div>
                     <img class="mt-1" src="{% static 'images/team/patrick.jpg' %}" alt="Team member: Patrick O'Doherty">
@@ -144,7 +160,6 @@
                   <div class="content">
                       <div>
                           <h3>Bio:</h3>
-                          <p>Lorum</p>
                       </div>
                   </div>
               </div>
@@ -157,16 +172,71 @@
 <div class="prideful">
   <h2>Prideful Pixels</h2>
 </div>
+<div class="details-section" id="details-section">
+  <button class="close-btn">x</button>
+  <h2 id="details-name"></h2>
+  <p id="details-bio"></p>
+  <p id="details-info"></p>
+  <div id="details-links">
+    <a id="link1" class="about-link-icon" href="#" target="_blank"><i class="fab fa-github"></i></a>
+    <a id="link2" class="about-link-icon" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    const light = document.querySelector('.light');
+    const cardAxes = document.querySelectorAll('.card-axis');
+    
+    light.addEventListener('mouseover', function() {
+      cardAxes.forEach(card => {
+        card.classList.add('highlight');
+      });
+    });
+
+    light.addEventListener('mouseout', function() {
+      cardAxes.forEach(card => {
+        card.classList.remove('highlight');
+      });
+    });
+
     const polaroids = document.querySelectorAll('.polariod');
-  
+    const detailsSection = document.getElementById('details-section');
+    const detailsName = document.getElementById('details-name');
+    const detailsBio = document.getElementById('details-bio');
+    const detailsInfo = document.getElementById('details-info');
+    const link1 = document.getElementById('link1');
+    const link2 = document.getElementById('link2');
+    const closeBtn = document.querySelector('.close-btn');
+
     polaroids.forEach(polaroid => {
       polaroid.addEventListener('click', function() {
-        const cardAxis = polaroid.querySelector('.card-axis');
-        cardAxis.classList.toggle('flipped');
+        const name = this.getAttribute('data-name');
+        const bio = this.getAttribute('data-bio');
+        const info = this.getAttribute('data-info');
+        const link1Url = this.getAttribute('data-link1');
+        const link2Url = this.getAttribute('data-link2');
+
+        detailsName.textContent = name;
+        detailsBio.textContent = bio;
+        detailsInfo.textContent = info;
+        link1.href = link1Url;
+        link2.href = link2Url;
+
+        detailsSection.classList.add('visible');
       });
+    });
+
+    // Hide details section if close button is clicked
+    closeBtn.addEventListener('click', function() {
+      detailsSection.classList.remove('visible');
+    });
+
+    // Hide details section if clicked outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.polariod') && !event.target.closest('#details-section')) {
+        detailsSection.classList.remove('visible');
+      }
     });
   });
 </script>

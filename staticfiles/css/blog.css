@@ -1,0 +1,60 @@
+/* BLOG */
+
+.blog-card {
+    min-height: 530px;
+    background-color: rgb(248, 252, 255);
+  }
+  
+  .blog-card:hover {
+    background-color: white;
+    transition: background-color 0.7s;
+  }
+  
+  .blog-page .card-img-top {
+    max-height: 330px;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    min-height: 10px;
+  }
+  
+  .blog-latest-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 0 7px 7px 0;
+  }
+  
+  .blog-header-container {
+    position: relative;
+  }
+  
+  .blog-header-img {
+    max-height: 50vh;
+    border-radius: 15px;
+  }
+  
+  .blog-header-overlay {
+    position: absolute;
+    margin: 30px;
+    padding: 25px;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 50px 15px 50px; 
+  }
+  
+  .blog-contact {
+    background-color: #bbb;
+    background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+  }
+  
+  /* Comment section */
+  .comment-delete {
+    background-color: #bbb;
+    background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+    box-shadow: 3px 3px 1px #000;
+    border-radius: 5px;
+  }

@@ -2,7 +2,7 @@
 
 </h1>
 
-<img src="https://res.cloudinary.com/djdefbnij/image/upload/v1718956326/Untitled_design_1_rlpfyv.png" alt="Proud Coders Banner" width="1200"/>
+<img src="static/images/pride site a.png" alt="Chronicles of Pride site" width="1200"/>
 
 ## Table of Contents
 - [Deployment](#deployment)
@@ -210,46 +210,45 @@ The tech section provides information regarding the technology stack, dependenci
 | [ElephantSQL](https://www.elephantsql.com) | Used as the Postgres database |
 | [Heroku](https://dashboard.heroku.com) | Used for deployment |
 | [Cloudinary](https://cloudinary.com) | Used for media storage |
-| [Miro](https://miro.com/) | Across website | Plan/Visualise our product as a team  |
-| [Google Docs](https://docs.google.com/) | Across website | Plan/Visualise our product as a team  |
-| [Visual Studio Code](https://code.visualstudio.com/) | Across Website | Code Editor |
-| [Gitpod](https://gitpod.io/) | Across website | Code Editor |
-| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Models | Created models |
-| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | LGBTQIA+ flags | Converted images from AVIF to JPG |
-| [SVG to PNG](https://svgtopng.com/) | Across website | Converted images from SVG to PNG |
-| [JPG to PNG](https://jpg2png.com/) | Across website| Converted images from JPG to PNG |
-| [TinyJPG](https://tinyjpg.com/) | Across website | Surpressed images |
-| [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) | Across website | Bootstrap5 |
-
+| [Miro](https://miro.com/) | Plan/Visualise our product as a team  |
+| [Google Docs](https://docs.google.com/) | Plan/Visualise our product as a team  |
+| [Visual Studio Code](https://code.visualstudio.com/) | Code Editor |
+| [Gitpod](https://gitpod.io/) | Code Editor |
+| [Django](https://docs.djangoproject.com/en/4.2/topics/db/models/) | Created models |
+| [Cloudconvert](https://cloudconvert.com/avif-to-jpg) | Converted images from AVIF to JPG |
+| [SVG to PNG](https://svgtopng.com/) | Converted images from SVG to PNG |
+| [JPG to PNG](https://jpg2png.com/) | Converted images from JPG to PNG |
+| [TinyJPG](https://tinyjpg.com/) | Surpressed images |
+| [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) | Bootstrap5 |
+| [Techsini](https://techsini.com/multi-mockup/index.php) | create multi tool example |
+| [RSS feed](https://rss.app/feed/shL5YRROjhwwABVx) | plugin for news feed |
 
 
 ## Resources Used
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Human Rights Campaign](https://www.hrc.org/resources/lgbtq-pride-flags) | Rainbow cards | Provided flag info and context |
 | [Mailtrap.io](https://mailtrap.io/) | Contact form | Linked  contact form to receive emails |
 | [YouTube](https://www.youtube.com/watch?v=dnhEnF7_RyM) | Contact form | Tutorial to troubleshoot contact form functionality |
 | [Font Awesome](https://fontawesome.com/) | Across website | Inspiration for icons |
-| [Voda](https://www.voda.co/) | Some of our favourite people | Support page |
-| [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) | Some of our favourite people | Support page |
-| [Bicycle Adventure Club](https://bicycleadventureclub.co.uk/) | Some of our favourite people | Support page |
 | [Fandom](https://lgbtqia.fandom.com/wiki/LGBTQIA%2B_Wiki) | History | Provided main events |
-| [Fonts Google](https://fonts.google.com/ ) | A website | Font selection |
+| [Fonts Google](https://fonts.google.com/ ) | Across website | Font selection |
 | [Coolors](https://coolors.co/) | Across website | Colour palette selection |
 | [PFLAG](https://pflag.org/intlfamilygroups/) | Contact page | Help section |
-| [History Timeline](https://freefrontend.com/css-timelines/) | History Page | Histoy Timeline section idea|
+| [History Timeline](https://freefrontend.com/css-timelines/) | History Page | History page|
+| [W3Schools](https://www.w3schools.com/) | Across website | Various help pages |
 | [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | READme | Help with writing the READme |
 | [Djecrety](https://djecrety.ir/) | Across website | Django key generator |
 | [Stack Overflow](https://stackoverflow.com/questions/11481499/django-iterate-number-in-for-loop-of-a-template) | Blog page | Loop iteration |
 | [Stack Overflow](https://stackoverflow.com/questions/78689770/django-django-contrib-messages-add-new-constant-messages-notice) | Blog page | Messages used for notifications |
-| [Belong to](https://www.belongto.org/) | Rainbow cards | Content |
 | [Wikipedia](https://www.wikipedia.org/) | History page | Content |
 | [Verywell Mind](https://www.verywellmind.com/) | History page | Content |
 | [Readers Digest](https://www.rd.com/) | History page | Content |
 | [Business Insider](https://www.businessinsider.com/) | History page | Content |
 | [High Speed Training](https://www.highspeedtraining.co.uk/) | History page | Content |
 | [Stacker](https://stacker.com/) | History page | Content |
+| [HRC](https://www.hrc.org/resources/lgbtq-pride-flags) | Rainbow cards | Content |
+| [Belong to](https://www.belongto.org/) | Rainbow cards | Content |
 | [The Center](https://gaycenter.org/) | Rainbow cards | Content |
 | [ISPCC](https://www.ispcc.ie/) | Rainbow cards | Content |
 | [BCC](https://www.bbc.co.uk/) | Rainbow cards| Content |
@@ -272,18 +271,18 @@ We would like to acknowledge three amazing groups of people that have permitted 
 
 * Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.:
 
-  * Chris Niblock [Email](nibbo1984@hotmail.co.uk) | [Github](https://github.com/cniblock)
+  * [Chris Niblock](https://github.com/cniblock)
 
-  * Josip Potnar [Email](j.potnar@gmail.com) | [Github](https://www.youtube.com/@queeeerchameleon)
+  * [Josip Potnar](https://www.youtube.com/@queeeerchameleon)
 
-  * Kayla Smith [Email](kaylaesmith1@gmail.com) | [Github](https://github.com/kaylaesmith1)
+  * [Kayla Smith](https://github.com/kaylaesmith1)
 
-  * Kiree Bellamy [Email](kireebellamy@gmail.com) | [Github](https://github.com/swewi)
+  * [Kiree Bellamy](https://github.com/swewi)
 
-  * Maarten Ridder [Email](maartenj.ridder@gmail.com) | [Github](https://github.com/MJRidder)
+  * [Maarten Ridder](https://github.com/MJRidder)
 
-  * Mia Rasmussen [Email](rasmussenm376@gmail.com) | [Github](https://github.com/MiaRasmussen05)
+  * [Mia Rasmussen](https://github.com/MiaRasmussen05)
 
-  * Patrick O'Doherty [Email](patrickodoherty2023@gmail.com) | [Github](https://github.com/patrickaod)
+  * [Patrick O'Doherty](https://github.com/patrickaod)
 
 * Special thanks to Mia Rasmussen for creating the logo, hero image and blog default image.

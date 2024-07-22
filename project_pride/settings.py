@@ -18,21 +18,13 @@ if os.path.isfile('env.py'):
 
 from django.contrib.messages import constants as messages
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY"),
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com', os.environ.get("ALLOWED_HOST")]
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -91,10 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project_pride.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
 DATABASES = {
     'default': ({
         'ENGINE': 'django.db.backends.sqlite3',
@@ -104,8 +92,6 @@ DATABASES = {
     ))
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -122,9 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -135,17 +118,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Default primary key field type
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Cloudinary configuration for media storage
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get("CLOUDINARY_CLOUD_NAME"),
@@ -153,13 +130,9 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get("CLOUDINARY_API_SECRET"),
 }
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# EMAIL CONTACT FORM TO ADMIN
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = 'c9583217415a11'
 EMAIL_HOST_PASSWORD = 'cfe55a139d4fa1'
@@ -169,8 +142,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-josipcodes-hackteam2-fvcd5ecaps8.ws-us115.gitpod.io',
 ]
 
-
-# MESSAGES
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-secondary',
     messages.INFO: 'alert-info',
