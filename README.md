@@ -236,6 +236,7 @@ The tech section provides information regarding the technology stack, dependenci
 | [Coolors](https://coolors.co/) | Across website | Colour palette selection |
 | [PFLAG](https://pflag.org/intlfamilygroups/) | Contact page | Help section |
 | [History Timeline](https://freefrontend.com/css-timelines/) | History Page | History page|
+| [W3Schools](https://www.w3schools.com/) | Across website | Various help pages |
 | [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | READme | Help with writing the READme |
 | [Djecrety](https://djecrety.ir/) | Across website | Django key generator |
 | [Stack Overflow](https://stackoverflow.com/questions/11481499/django-iterate-number-in-for-loop-of-a-template) | Blog page | Loop iteration |
