@@ -126,5 +126,10 @@ In the tech section, we provide information about the technology stack, dependen
 
 ### Acknowledgements
 
-- Further words of gratitude
-- 
+We would like to acknowledge three amazing groups of people that have permitted us to link their sites, each of them has a direct link to the LGBTQIA+ community and we thank them for their permission:
+
+* [Bicycle Adventure Club](https://bicycleadventureclub.co.uk/) - An LGBTQIA+ led bike club and Community Interest Company based in Birmingham, UK, with members around the world.
+
+* [Queer Chameleon](https://www.youtube.com/@queeeerchameleon) -  Youtube channel with lots of interesting facts and information about the queer community.
+
+* [Voda](https://www.voda.co/blog) - An amazing app made by the queer community for the queer community to support the mental mental health of members of the LGBTQIA+ community.
