@@ -270,6 +270,20 @@ We would like to acknowledge three amazing groups of people that have permitted 
 
 * [Voda](https://www.voda.co/blog) - An amazing app made by the queer community for the queer community to support the mental mental health of members of the LGBTQIA+ community.
 
-* Special thanks to Mia Rasmussen for creating the logo, hero image and blog default image.
+* Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.:
 
-Special mention is also deserved by our team as a whole; each of us was integral in bringing Chronicles of Pride to fruition. We learned a lot from each other, dove headfirst into new technologies and were helpful in times of need resolving coding issues.
+  * Chris Niblock [Email](nibbo1984@hotmail.co.uk) | [Github](https://github.com/cniblock)
+
+  * Josip Potnar [Email](j.potnar@gmail.com) | [Github](https://www.youtube.com/@queeeerchameleon)
+
+  * Kayla Smith [Email](kaylaesmith1@gmail.com) | [Github](https://github.com/kaylaesmith1)
+
+  * Kiree Bellamy [Email](kireebellamy@gmail.com) | [Github](https://github.com/swewi)
+
+  * Maarten Ridder [Email](maartenj.ridder@gmail.com) | [Github](https://github.com/MJRidder)
+
+  * Mia Rasmussen [Email](rasmussenm376@gmail.com) | [Github](https://github.com/MiaRasmussen05)
+
+  * Patrick O'Doherty [Email](patrickodoherty2023@gmail.com) | [Github](https://github.com/patrickaod)
+
+* Special thanks to Mia Rasmussen for creating the logo, hero image and blog default image.
