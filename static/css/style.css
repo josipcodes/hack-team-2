@@ -2,13 +2,6 @@ body {
   font-family: Ubuntu;
 }
 
-/* .alert {
-  position: relative;
-  padding: 1rem 1rem;
-  margin: 0 auto;
-  border-radius: .25rem;
-} */
-
 .alert-dismissible {
   display: none;
 }

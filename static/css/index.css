@@ -33,7 +33,7 @@
   
   .hero h1, .hero h2, .hero p {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-    color: #000000; /* Adjust color as needed */
+    color: #000000;
   }
   
   .news {
