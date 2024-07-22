@@ -75,3 +75,18 @@
     text-decoration: none;
     color: #000000;
   }
+
+  @media (max-width: 992px) {
+    .flex-lg-row-reverse {
+        flex-direction: column !important;
+    }
+
+    .flex-lg-row-reverse .col-lg-6 {
+        order: 2;
+    }
+
+    .flex-lg-row-reverse .col-10.col-sm-8.col-lg-6 {
+        order: 1;
+        margin-bottom: 15px;
+    }
+}
