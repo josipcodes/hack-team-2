@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Blog{% endblock %}
 
@@ -14,7 +15,7 @@
 </div>
 
 <!-- Blog posts section -->
-<div class="container blog-page">
+<div class="container blog-page" id="blog-posts-container">
     <div class="row">
         {% for post in object_list %}
         <!-- expands the latest post on wider screens -->
@@ -48,38 +49,32 @@
                     <hr>
                     <!-- Category, published date/time and comment section -->
                     <div class="col-12 d-flex justify-content-around">
-                        <span class="h6 pb-1 ps-1 fw-bolder">{{ post.blog_category }} 
-                        </span>
-                        <span class="text-muted h6 pb-1 ps-3 me-3 fw-bolder">{{ post.created_on }} 
-                        </span>
+                        <span class="h6 pb-1 ps-1 fw-bolder">{{ post.blog_category }}</span>
+                        <span class="text-muted h6 pb-1 ps-3 me-3 fw-bolder">{{ post.created_on }}</span>
                         <span>
                             {% with post.comments.count as total_comments %}
-                            <strong class="text-secondary blog-comment pe-1 pb-1"><i class="far fa-comments"></i>
-                                {{ total_comments }}</strong>
+                            <strong class="text-secondary blog-comment pe-1 pb-1"><i class="far fa-comments"></i> {{ total_comments }}</strong>
                             {% endwith %}
                         </span>
                     </div>
                 </a>
             </div>
         </div>
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
 </div>
 
 {% if is_paginated %}
-<nav aria-label="Page navigation">
-    <ul class="blog-pagination pagination justify-content-center mt-4">
+<div aria-label="Page navigation" class="mb-5">
+    <ul class="blog-pagination pagination justify-content-center mt-4 mb-5">
         {% if page_obj.has_previous %}
         <li><a href="?page={{ page_obj.previous_page_number }}" class="btn">&laquo; PREV </a></li>
         {% endif %}
         {% if page_obj.has_next %}
         <li><a href="?page={{ page_obj.next_page_number }}" class="btn"> NEXT &raquo;</a></li>
-
         {% endif %}
     </ul>
-</nav>
-
+</div>
 {% endif %}
 
 {% endblock %}
