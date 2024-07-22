@@ -29,8 +29,9 @@
   <nav class="navbar navbar-expand-lg navbar-light transparent-bg">
     <div class="container-fluid">
       <!-- Brand Name -->
-      <a class="navbar-brand mt-lg-2" href="{% url 'home' %}">
-        <span class="brand ms-3">Chronicles of Pride</span>
+      <a class="col-1 navbar-brand mt-lg-2" href="{% url 'home' %}">
+        {% comment %} <span class="brand ms-3">Chronicles of Pride</span> {% endcomment %}
+         <img src="{% static "../static/images/logo.png" %}">
       </a>
       <!-- Toggle Button for Mobile View -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -60,6 +61,10 @@
           <!-- About Link -->
           <li class="nav-item mb-2 mt-lg-2 mb-lg-0">
             <a class="nav-link" href="{% url 'about' %}">Meet the Team</a>
+          </li>
+          <!-- Contact Link -->
+          <li class="nav-item mb-2 mt-lg-2 mb-lg-0">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
         </ul>
 
@@ -115,8 +120,8 @@
     {% endblock content %}
   </main>
 
-  <footer class="footer mt-auto py-3 dark-bg p-1">
-    <div class="row footer-row">
+  <footer class="footer mt-auto dark-bg p-0 pt-1">
+    <div class="row footer-row me-0">
       <div class="col-md-4 quick-links-container">
         <h3 class="footer-title">Quick Links</h3>
         <div class="quick-links-content">
@@ -125,6 +130,7 @@
           <a href="{% url 'cards' %}" rel="noopener" aria-label="Rainbow Cards page">Rainbow Cards</a>
           <a href="{% url 'blog' %}" rel="noopener" aria-label="Blog page">Blog</a>
           <a href="{% url 'about' %}" rel="noopener" aria-label="About page">Meet the Team</a>
+          <a href="{% url 'contact' %}" rel="noopener" aria-label="Contact page">Contact</a>
         </div>
       </div>
       <div class="col-md-4 footlinks">
@@ -154,10 +160,12 @@
         </h3>
       </div>
     </div>
-    <p class="m-0 text-center border-top">
-      {% block copyright %} Team Prideful Pixels - July 2024 Code Institute
-      Hackathon {% endblock %}
-    </p>
+    <div class="m-0">
+      <p class="copyright m-0 p-1 text-center border-top">
+        {% block copyright %} @ Prideful Pixels - Team2 July 2024 Code Institute
+        Hackathon {% endblock %}
+      </p>
+    </div>
   </footer>
 
   <!-- Font Awesome Kit -->

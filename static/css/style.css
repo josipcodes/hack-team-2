@@ -2,18 +2,49 @@ body {
   font-family: Ubuntu;
 }
 
+.popup-message {
+  position: fixed;
+  top: 90px;
+  margin-left: 2rem;
+  z-index: 1000;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+  border-radius: .25rem;
+}
+
+.alert-success {
+  background-color: #adeabb;
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+.alert-dismissible {
+  display: none;
+}
+
+/* .alert {
+  position: relative;
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  border-radius: .5rem;
+} */
+
 /* BASE HTML */
+
+.navbar-brand img {
+  width: 140%;
+}
 
 .dropdown-menu[data-bs-popper] {
   left: -90%;
   margin-right: 1rem;
 }
 
-.dropdown-item {
-  width: 90%;
-}
-
-nav {
+nav, footer {
   background-color: #FFF;
   border-bottom: 5px solid transparent;
   border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
@@ -403,13 +434,11 @@ nav {
 
 .card-border-wrapper {
   position: relative;
-  height: 55%;
+  height: 55vh;
   display: inline-block; 
-  /* padding: 5px; */
   border: 10px solid transparent;
   border-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
   #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
-  border-radius: 10px;
 }
 
 .card-hist-info {
@@ -538,6 +567,11 @@ nav {
 
 /* FOOTER */
 
+footer {
+  border-top: 5px solid transparent;
+  border-bottom: none;
+}
+
 .footer-row {
   display: flex;
   align-items: flex-start;
@@ -649,6 +683,41 @@ nav {
   border: none;
 }
 
+.copyright {
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+}
+
+/* CONTACT PAGE */
+
+#helpBtn, #contactBtn {
+  background-color: #ffadad;
+  border: 2px solid #e40303;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#contactBtn {
+  border: 4px solid transparent;
+  border-bottom: none;
+  background-color: #fff;
+  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf, 
+  #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
+}
+
+#helpBtn:hover {
+  background-color: #fff;
+}
+
+#contactBtn:hover {
+  background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
+  border-image: none;
+  border-color: #000;
+}
+
+.contact-btns {
+  margin-right: 20%;
+}
+
 .contact-us {
   font-weight: bold !important;
   text-align: center;
@@ -690,6 +759,7 @@ nav {
   border-radius: 20px;
   text-align: center;
   background-image: linear-gradient(to bottom right, #ffc8c8, #ffe4c3, #fdfed6, #dfffd8, #c6faff, #c7ddff, #dcd5ff, #ffe1ff);
+  box-shadow: 3px 3px 1px #000;
 }
 
 .contact-form label {
@@ -727,39 +797,10 @@ nav {
   margin-bottom: 3px;
 }
 
-.popup-message {
-  position: fixed;
-  top: 90px;
-  margin-left: 2rem;
-  z-index: 1000;
-}
-
-.alert {
-  position: relative;
-  padding: 1rem 1rem;
-  margin: 0 auto;
-  border-radius: .25rem;
-}
-
-.alert-success {
-  background-color: #adeabb;
-  border: 2px solid black;
-  font-size: 18px;
-}
-
-.alert-dismissible {
-  display: none;
-}
-
-/* .alert {
-  position: relative;
-  padding: 1rem 1rem;
-  border: 1px solid transparent;
-  border-radius: .5rem;
-} */
-
 /* BLOG */
+
 .blog-card {
+  min-height: 530px;
   background-color: rgb(248, 252, 255);
 }
 
@@ -771,6 +812,10 @@ nav {
 .blog-page .card-img-top {
   max-height: 330px;
   object-fit: cover;
+}
+
+.card-text {
+  min-height: 10px;
 }
 
 .blog-latest-overlay {
@@ -889,7 +934,7 @@ nav {
   top: 0;
   left: 0;
   width: 130%;
-  height: 44%;
+  height: 50%;
   transform-style: preserve-3d;
   transition: 0.9s ease;
   background: #333;
