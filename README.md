@@ -220,6 +220,7 @@ The tech section provides information regarding the technology stack, dependenci
 | [JPG to PNG](https://jpg2png.com/) | Across website| Converted images from JPG to PNG |
 | [TinyJPG](https://tinyjpg.com/) | Across website | Surpressed images |
 | [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) | Across website | Bootstrap5 |
+| [Techsini](https://techsini.com/multi-mockup/index.php) | Hachathon page | create multi tool example |
 
 
 
