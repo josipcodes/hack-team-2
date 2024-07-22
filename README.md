@@ -5,14 +5,54 @@
 <img src="https://res.cloudinary.com/djdefbnij/image/upload/v1718956326/Untitled_design_1_rlpfyv.png" alt="Proud Coders Banner" width="1200"/>
 
 # SUBMISSION
+Take a look at the live site [here](https://chronicles-of-pride-9a12d37ba4db.herokuapp.com/).
 
 ## Deployment
+The following steps were taken to deploy the live website to Heroku from the GitHub repository:
 
-#### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
+### Create a Heroku App:
+- Log into your [Heroku](https://dashboard.heroku.com/apps) account or create an account.
+- On the main page click the 'New' button at the top right corner and select 'Create New App' from the dropdown menu. 
+![Heroku Create App](/documentation/readme_images/heroku-create-new.png)
+- Enter in a unique app name
+- Select your region
+- Click 'Create App'
+![Heroku New App](/documentation/readme_images/heroku-create-app.png)
 
-The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
+### Prepare the environment and settings.py file:
+- In your GitPod workspace, create an env.py file in the main directory.
+- Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file. 
+- Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
+- Comment out the default database configuration.
+- Save all files and make migrations.
+- Add the Cloudinary URL to env.py
+- Add the Cloudinary libraries to the list of installed apps.
+- Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+- Link the file to the templates directory in Heroku.
+- Change the templates directory to TEMPLATES_DIR
+- Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
 
-## Criteria
+### Create files & directories
+- Create a requirements.txt file
+- Create directories in the main directory, eg: static, templates.
+- Create a "Procfile" in the main directory and add the following: web: gunicorn project_name.wsgi
+- Make sure the Procfile is capitalized and only has one line.
+
+### Update Heroku Config Vars -- JOSIP CAN YOU LOOK AT THIS?
+Add the following Config Vars in Heroku:
+- SECRET_KEY value 
+- CLOUDINARY_URL
+- PORT = 8000
+- DISABLE_COLLECTSTATIC = 1
+- DATABASE_URL value
+
+### Deploy
+- Make sure DEBUG = False in settings.py
+- Go to the deploy tab on Heroku and connect to GitHub, then to the required repository. 
+- Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need to be re-deployed each time the GitHub repository is updated.
+- Click 'Open App' to view the deployed site live.
+
+## Criteria  PICK UP HERE
 
 In this section, we will briefly discuss how our team addressed the applicable criteria:
 
