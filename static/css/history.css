@@ -8,7 +8,6 @@
   
 .history-section {
     --color: rgba(30, 30, 30);
-    /* --bgColor: rgba(245, 245, 245); */
     display: grid;
     align-content: center;
     gap: 2rem;
