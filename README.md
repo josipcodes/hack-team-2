@@ -236,7 +236,7 @@ The tech section provides information regarding the technology stack, dependenci
 | [Fonts Google](https://fonts.google.com/ ) | A website | Font selection |
 | [Coolors](https://coolors.co/) | Across website | Colour palette selection |
 | [PFLAG](https://pflag.org/intlfamilygroups/) | Contact page | Help section |
-| [PFLAG](https://freefrontend.com/css-timelines/) | History Page | Histoy Timeline section |
+| [History Timeline](https://freefrontend.com/css-timelines/) | History Page | Histoy Timeline section idea|
 
 ### Acknowledgements -- EVERYONE PLEASE ADD / CHANGE WHAT YOU WANT
 Firstly, we would like to acknowledge XXXXX <strong>(Kiree, your contact / people you have personal stories from?)</strong> for their willingness to share their story as a LGBTQIA+ individual. By showcasing stories like these, we hope Chronicles of Pride can facilitate understanding, foster interpersonal compassion and quell misinformation and hatred in the media. 
