@@ -12,7 +12,7 @@
   
   .blog-page .card-img-top {
     max-height: 330px;
-    object-fit: contain;
+    object-fit: cover;
   }
   
   .card-text {
