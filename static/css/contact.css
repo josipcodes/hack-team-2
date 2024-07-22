@@ -134,3 +134,9 @@
   margin-right: 10px;
   margin-bottom: 3px;
 }
+
+@media (max-width: 991px) { 
+  .contact-form {
+    max-width: 100%;
+  }
+}

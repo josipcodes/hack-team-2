@@ -112,3 +112,20 @@
     text-align: center;
     color: black;
   }
+
+  @media (max-width: 991px) { 
+    .flip-card {
+      width: 350px;
+      height: 200px;
+    }
+
+    .rainbow-shadow {
+      width: 70%;
+      height: 70%;
+    }
+
+    .card-container {
+      margin: 0;
+      margin-left: -80px;
+    }
+}
