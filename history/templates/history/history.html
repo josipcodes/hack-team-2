@@ -53,15 +53,33 @@
   </div>
 </div>
 
+<!-- Scroll to top btn -->
+<button id="scrollBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const historyEvents = document.querySelectorAll(".history-event");
-
+        const scrollBtn = document.getElementById("scrollBtn");
+    
         historyEvents.forEach((event) => {
           const dateElement = event.querySelector(".history-date");
           dateElement.addEventListener("click", function () {
             event.classList.toggle("expanded");
           });
+        });
+    
+        // Show/hide the button when scrolling
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > window.innerHeight) {
+            scrollBtn.style.display = "block";
+          } else {
+            scrollBtn.style.display = "none";
+          }
+        });
+    
+        // Scroll to top when the button is clicked
+        scrollBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
       });
     </script>

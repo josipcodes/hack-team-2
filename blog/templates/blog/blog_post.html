@@ -62,11 +62,14 @@
                         	<input type="submit" class="btn rainbow-btn me-3 mt-2"></a>
 						</div>
                     </form>
-                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-sm-9 card mb-4 mt-3 bg-transparent border-0">
                 <h3>Comments:</h3>
+                {% else %}
+                      <h3>To leave a comment please login!</h3>
+                      <a href="{% url 'account_login' %}" rel="noopener" aria-label="Login Page"></a>
+                    {% endif %}
                 <div class="mb-md-5 mb-md-0">
                     <div class="card-body p-0 pt-2">
                         {% for comment in comments %}

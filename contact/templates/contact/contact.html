@@ -53,7 +53,7 @@
         <button class="submit-btn px-4">Submit</button>
     </form>
     <div id="helpSection" class="container contact-form" style="display:none;">
-        <h2>Help Lines</h2>
+        <h2 class="mb-4">Help Lines</h2>
         <div class="row">
             <div class="col-12 col-lg-6">
                 <h3><bold>PFLAG</bold></h3>
@@ -128,9 +128,13 @@
             </div>
             <div class="col-12 col-lg-6">
                 <h3><bold>Organizations</bold></h3>
+                <p class="d-flex">
+                    <bold>Australia:</bold>
+                    <a href="https://www.minus18.org.au/" target="_blank" rel="noopener"
+                    aria-label="Link to Minus18 in Australia page (opens in a new tab)">MINUS18</a>
+                </p>
             </div>
         </div>
-        <!-- Add more help content as needed -->
     </div>
 </div>
 
@@ -151,7 +155,7 @@
         if (popup) {
             setTimeout(function() {
                 popup.style.display = 'none';
-            }, 1000); 
+            }, 3000); 
         }
     });
 

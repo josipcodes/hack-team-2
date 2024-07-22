@@ -76,7 +76,7 @@
         <ul class="navbar-nav justify-content-end align-self-center">
           {% if user.is_authenticated %}
           <!-- User Dropdown Menu -->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown me-4">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               {{ user.username }}
@@ -99,18 +99,20 @@
     </div>
   </nav>
 
-  <!-- Displaying Django Messages -->
-  <div class="container user-pg">
+<!-- Displaying Django Messages -->
+{% if messages %}
+  <div class="container">
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div id="alert-message" class="col-md-8 offset-md-2 text-center popup-message">
         {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-          {{ message | safe }}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message|safe }}
         </div>
         {% endfor %}
       </div>
     </div>
   </div>
+{% endif %}
 
   <!-- Main Content Area -->
   <main class="flex-shrink-0 transparent-bg">
@@ -167,6 +169,18 @@
       </p>
     </div>
   </footer>
+
+  <!-- JavaScript for pop-up message -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var alert = document.getElementById("alert-message");
+      if (alert) {
+        setTimeout(function() {
+          alert.style.display = 'none';
+        }, 3000);
+      }
+    });
+  </script>
 
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/1f32015eb0.js" crossorigin="anonymous"></script>

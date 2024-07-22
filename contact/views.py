@@ -27,7 +27,7 @@ def contact(request):
             })
 
             send_mail('The contact form subject', 'This is the message', 'kaylaesmith1@gmail.com', ['kaylaesmith1@gmail.com'], html_message=html)
-            messages.success(request, 'Success!')
+            messages.success(request, 'Success! Your message has been sent!')
             return redirect('contact')
     else: 
         form = ContactForm()
