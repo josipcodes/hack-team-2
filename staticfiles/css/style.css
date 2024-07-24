@@ -22,6 +22,12 @@ body {
   margin-top: 125px;
 }
 
+h1 {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+
 /* BASE HTML */
 
 .navbar-brand img {
@@ -41,9 +47,22 @@ nav,
 footer {
   background-color: #FFF;
   border-bottom: 5px solid transparent;
-  border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf,
-      #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1;
+  /* border-image: linear-gradient(to right, #ffadad, #ffd6a5, #fdffb6, #caffbf,
+      #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff) 1; */
+      border-image: linear-gradient(to right, #ffd6a5, #fdffb6, #caffbf,
+      #9bf6ff, #a0c4ff, #bdb2ff, #bdb2ff, #a0c4ff, #9bf6ff, 
+      #caffbf, #fdffb6, #ffd6a5, #ffd6a5, #fdffb6, #caffbf,
+      #9bf6ff, #a0c4ff, #bdb2ff) 1;
   box-shadow: 0 0 15px #b8f9ff;
+}
+
+.drip {
+  width: 100%;
+  background-color: #ffffff;
+  background-image: url("../images/drip4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
 }
 
 /* BUTTONS */
@@ -259,10 +278,47 @@ footer {
   background-image: linear-gradient(to bottom right, #ffadad, #ffd6a5, #fdffb6, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff, #ffc6ff);
 }
 
+@media (min-width: 300px) {
+  nav, footer {
+    border-image: linear-gradient(to right, #ffd6a5, #fdffb6, #caffbf,
+  #9bf6ff, #a0c4ff, #bdb2ff) 1;
+  }
+
+.drip {
+    height: 40px;
+  }
+}
+
 @media (max-width: 650px) {
   .contact-form {
     margin: 0 auto;
     max-width: 95%;
     padding: 12px;
+  }
+}
+
+@media (min-width: 650px) {
+  .drip {
+    height: 57px;
+  }
+}
+
+@media (max-width: 910px) {
+  .navbar-brand img {
+    width: 450%;
+  }
+
+  .drip {
+    height: 60px;
+  }
+}
+
+@media (min-width: 1110px) {
+  nav,
+  footer {
+    border-image: linear-gradient(to right, #ffd6a5, #fdffb6, #caffbf,
+  #9bf6ff, #a0c4ff, #bdb2ff, #bdb2ff, #a0c4ff, #9bf6ff, 
+  #caffbf, #fdffb6, #ffd6a5, #ffd6a5, #fdffb6, #caffbf,
+  #9bf6ff, #a0c4ff, #bdb2ff) 1;
   }
 }
