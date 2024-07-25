@@ -10,7 +10,7 @@
     transition: background-color 0.7s;
   }
   
-  .blog-page .card-img-top {
+  .blog-page .blog-list-img {
     min-height: 330px;
     max-height: 330px;
     object-fit: cover;
@@ -35,6 +35,10 @@
   
   .blog-header-img {
     max-height: 23vh;
+    border-radius: 15px;
+  }
+
+  .blog-user-img {
     border-radius: 15px;
   }
   
