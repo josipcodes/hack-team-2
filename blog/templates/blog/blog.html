@@ -1,10 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %}Blog{% endblock %}
-
 {% block content %}
-
 <!-- Blog page heading -->
 <div class="container-fluid mt-5">
     <div class="row">
@@ -13,7 +10,6 @@
         </div>
     </div>
 </div>
-
 <!-- Blog posts section -->
 <div class="container blog-page" id="blog-posts-container">
     <div class="row">
@@ -25,15 +21,18 @@
                     <div class="image-container position-relative">
                         <!-- Placeholder image -->
                         <img src="https://imgur.com/mmg56eP.png" class="card-img-top" alt="Placeholder Image">
-
                         <!-- adds overlay to the image of the latest post -->
+                        {% if forloop.first %}
                         {% if is_paginated %}
                         {% if not page_obj.has_previous %}
-                        {% if forloop.first %}
                         <div class="blog-latest-overlay d-flex justify-content-start">
                             <div class="h4 mx-5 my-2">Latest</div>
                         </div>
                         {% endif %}
+                        {% else %}
+                        <div class="blog-latest-overlay d-flex justify-content-start">
+                            <div class="h4 mx-5 my-2">Latest</div>
+                        </div>
                         {% endif %}
                         {% endif %}
                     </div>
@@ -60,7 +59,6 @@
         {% endfor %}
     </div>
 </div>
-
 {% if is_paginated %}
 <div aria-label="Page navigation" class="mb-5">
     <ul class="blog-pagination pagination justify-content-center mt-4 mb-5">
@@ -73,5 +71,4 @@
     </ul>
 </div>
 {% endif %}
-
 {% endblock %}
