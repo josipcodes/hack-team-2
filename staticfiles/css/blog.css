@@ -11,6 +11,7 @@
   }
   
   .blog-page .card-img-top {
+    min-height: 330px;
     max-height: 330px;
     object-fit: cover;
   }
@@ -33,7 +34,7 @@
   }
   
   .blog-header-img {
-    max-height: 50vh;
+    max-height: 23vh;
     border-radius: 15px;
   }
   
