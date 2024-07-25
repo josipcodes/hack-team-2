@@ -56,13 +56,24 @@ footer {
   box-shadow: 0 0 15px #b8f9ff;
 }
 
-.drip {
+/* .drip {
   width: 100%;
   background-color: #ffffff;
   background-image: url("../images/drip4.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
+} */
+
+.drip {
+  width: 100%;
+  background-color: #FFFFFF;
+  background-image: url("../images/drip.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
 }
 
 /* BUTTONS */
