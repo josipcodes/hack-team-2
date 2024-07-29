@@ -37,7 +37,7 @@
       <!-- Brand Name -->
       <a class="col-1 navbar-brand mt-lg-2" href="{% url 'home' %}">
         {% comment %} <span class="brand ms-3">Chronicles of Pride</span> {% endcomment %}
-         <img src="{% static "../static/images/logo.png" %}">
+        <img src="{% static "../static/images/logo.png" %}">
       </a>
       <!-- Toggle Button for Mobile View -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -105,8 +105,8 @@
     </div>
   </nav>
 
-<!-- Displaying Django Messages -->
-{% if messages %}
+  <!-- Displaying Django Messages -->
+  {% if messages %}
   <div class="container">
     <div class="row">
       <div id="alert-message" class="col-md-8 offset-md-2 text-center popup-message">
@@ -118,7 +118,7 @@
       </div>
     </div>
   </div>
-{% endif %}
+  {% endif %}
 
   <!-- Main Content Area -->
   <main class="flex-shrink-0 transparent-bg">
@@ -162,12 +162,30 @@
         </div>
       </div>
       <div class="col-lg-4 mt-4">
-        <h3>
-          <a class="footer-title contact-us" href="{% url 'contact' %}">
-            <span class="contact-text">Contact Us!</span>
-          </a>
-        </h3>
-        <p class="d-flex justify-content-center">If you wish to share something with us. Give us a shout!</p>
+        <div class="footer-content">
+          <h3>
+            <a class="footer-title contact-us" href="{% url 'contact' %}">
+              <span class="contact-text">Contact Us!</span>
+            </a>
+          </h3>
+          <p class="d-flex justify-content-center">If you wish to share something with us. Give us a shout!</p>
+          <blockquote class="badgr-badge">
+            <a href="https://api.eu.badgr.io/public/assertions/yHT8TjDBSd69DhrfmYf2cg" target="_blank" rel="noopener"
+            aria-label="Opens up the page displaying the badge, note this is an individuals badge relabeled for the team. (opens in a new tab)">
+                <img width="120px" height="120px" src="https://api.eu.badgr.io/public/assertions/yHT8TjDBSd69DhrfmYf2cg/image" alt="Bronze medal badge image from July 2024 Code Institute Hackathon.">
+            </a>
+            <p class="badgr-badge-name">July 2024 Hackathon: 3rd Place</p>
+            <p class="badgr-badge-date">
+                <strong>Awarded:</strong> Jul 29, 2024
+            </p>
+            <p class="badgr-badge-recipient">
+                <strong>Awarded To:</strong> <span>Prideful Pixels</span>
+            </p>
+            <p class="verify-txt">
+              (Please note this is a personal badge, renamed for the entire team.)
+            </p>
+          </blockquote>
+        </div>
       </div>
     </div>
     <div class="m-0">
@@ -178,12 +196,15 @@
     </div>
   </footer>
 
+  <!-- Hackathon Badge -->
+  <script async="async" src="https://eu.badgr.com/assets/widgets.bundle.js"></script>
+
   <!-- JavaScript for pop-up message -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       var alert = document.getElementById("alert-message");
       if (alert) {
-        setTimeout(function() {
+        setTimeout(function () {
           alert.style.display = 'none';
         }, 3000);
       }
